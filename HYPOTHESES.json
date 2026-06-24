@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "campaign": "CAMEL grant health review",
+    "created": "2026-06-24",
+    "last_round": 0,
+    "description": "Hypothesis tree for weekly grant review loop. Each root child is a mechanism family. Frontier = open/promising nodes only."
+  },
+  "frontier": ["timeline", "budget", "personnel", "science", "reporting"],
+  "tree": {
+    "root": {
+      "id": "root",
+      "label": "Grant health",
+      "children": ["timeline", "budget", "personnel", "science", "reporting"]
+    },
+    "timeline": {
+      "id": "timeline",
+      "family": "timeline",
+      "label": "Timeline risk — deliverable slippage",
+      "status": "untried",
+      "posterior": 0.5,
+      "attempts": [],
+      "children": [],
+      "summary": "Which deliverable is most at risk of slipping past its due date?"
+    },
+    "budget": {
+      "id": "budget",
+      "family": "budget",
+      "label": "Budget risk — spend diverging from plan",
+      "status": "untried",
+      "posterior": 0.3,
+      "attempts": [],
+      "children": [],
+      "summary": "Where is budget burn rate diverging from the award plan?"
+    },
+    "personnel": {
+      "id": "personnel",
+      "family": "personnel",
+      "label": "Personnel gap — under/over-resourced roles",
+      "status": "untried",
+      "posterior": 0.3,
+      "attempts": [],
+      "children": [],
+      "summary": "Who on the team is under-supported or has open deliverables without capacity?"
+    },
+    "science": {
+      "id": "science",
+      "family": "science",
+      "label": "Science gap — technical progress needed",
+      "status": "untried",
+      "posterior": 0.4,
+      "attempts": [],
+      "children": [],
+      "summary": "Which deliverable needs more technical progress (code, data, analysis, writing)?"
+    },
+    "reporting": {
+      "id": "reporting",
+      "family": "reporting",
+      "label": "Reporting gap — NSF reports coming due",
+      "status": "untried",
+      "posterior": 0.5,
+      "attempts": [],
+      "children": [],
+      "summary": "What NSF reporting requirement is coming up and how prepared are we?"
+    }
+  },
+  "vocabulary": ["timeline", "budget", "personnel", "science", "reporting"],
+  "rounds_log": []
+}

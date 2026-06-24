@@ -1,0 +1,19 @@
+{
+  "round": 0,
+  "best": {
+    "health_scores": {
+      "timeline_risk": null,
+      "budget_risk": null,
+      "personnel_gap": null,
+      "science_gap": null,
+      "reporting_gap": null
+    },
+    "top_action": null
+  },
+  "budget": {
+    "spent_usd_est": 0,
+    "limit_usd": 2
+  },
+  "last_run": null,
+  "model": "claude-sonnet-4-6"
+}

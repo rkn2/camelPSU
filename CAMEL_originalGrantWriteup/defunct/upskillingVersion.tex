@@ -1,0 +1,566 @@
+\documentclass[11pt]{article} 
+% The Proposal and Award Policies and Procedures Guide
+% (PAPPG: https://www.nsf.gov/publications/pub_summ.jsp?ods_key=pappg)
+% mandates, in Chapter 2, section B.2, that the main text should have a font size no less
+% than 11 points for *most* typefaces (including Computer Modern Roman and Times (new) Roman).
+% 
+% Actually, Helvetica (a.k.a. Arial), Palatino and Courier New can drop
+% to 10 point font size, according to the PAPPG, but be aware:
+% 10-point fonts (whatever the typeface) will promote reader fatigue.
+% Reader fatigue never works to the author's advantage.
+%
+%
+% This sample  assumes the pdflatex chain (not the traditional latex | dvips | ps2pdf chain).
+% It should function in the traditional chain if you comment out the hyperref package lines.
+%
+%\usepackage{times} % uncomment for Times Roman;
+%                   % replace "times" with other font names, as desired. 
+\usepackage{bm} % If you want bold math, but without the bloat of AMS packages
+\usepackage{tabularx}
+\usepackage{color} % doh
+\usepackage{hyperref} % LaTeX cross references become hyperlinks in pdf output
+\usepackage{graphicx} % For figure insertion
+\usepackage{wrapfig} % for wrapping the figure
+\usepackage{subcaption}
+\usepackage{vmargin} % To set page size
+\usepackage{mathrsfs}
+\usepackage{float}
+%\usepackage{hyperref}
+%\usepackage[options]{nohyperref} 
+\usepackage{enumitem}
+
+\usepackage[svgnames]{xcolor}  % Load xcolor with predefined color names
+\usepackage[most]{tcolorbox}   % Load tcolorbox package
+\definecolor{mycmykcolor}{cmyk}{0.45,0.30,0.20,0}
+\definecolor{secondary}{cmyk}{0,0,0,0.20} 
+
+\newlist{gitemize0}{itemize}{4}
+\setlist[gitemize0,1]{
+    leftmargin=\dimexpr1cm+\labelsep\relax,
+    label={\smash{\raisebox{-0.45cm\height}{\includegraphics[width=0.8cm]{synergy.png}}}}
+}
+
+\newlist{gitemize3}{itemize}{4}
+\setlist[gitemize3,1]{
+    leftmargin=\dimexpr1cm+\labelsep\relax,
+    label={\smash{\raisebox{-0.55cm\height}{\includegraphics[width=0.8cm]{planning.jpeg}}}}
+}
+\newlist{gitemize2}{itemize}{4}
+\setlist[gitemize2,1]{
+    leftmargin=\dimexpr1cm+\labelsep\relax,
+    label={\smash{\raisebox{-0.55cm\height}{\includegraphics[width=0.8cm]{capacity.png}}}}
+}
+
+
+
+\usepackage{titlesec}
+\titleformat{\section}[runin]{\normalfont\bfseries}{\thesection}{1em}{}[:]
+\titlespacing*{\section}{0pt}{\baselineskip}{1ex}
+
+\titleformat{\subsection}[runin]{\normalfont\bfseries}{\thesubsection}{1em}{}[:]
+\titlespacing*{\subsection}{0pt}{\baselineskip}{1ex}
+
+% Define a custom command to format section titles with a new line
+\newcommand{\customsection}[1]{%
+  \titleformat{name=\section,numberless}[runin]{\normalfont\bfseries}{}{0pt}{\newline}[ ]%
+  \section{#1\newline}%
+}
+
+\usepackage{caption}
+
+\usepackage[square,sort&compress]{natbib}
+\bibliographystyle{unsrtnat} % Use the style of your choice
+\setcitestyle{numbers, square, comma, sort&compress}
+%
+% Hyperref stuff: WARNING: don't use \href{link}{clickable text} in the Project Description,
+% as Research.gov doesn't like it. Likewise, avoid any text containing 
+% http:, https:, mailto:, etc.
+%
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+%
+% vmargin parameters:
+% The Proposal and Award Policies and Procedures Guide
+% (PAPPG: https://www.nsf.gov/publications/pub_summ.jsp?ods_key=pappg)
+% mandates, in Chapter 2, section B.2, that margins must be at least 1 inch in all directions.
+%
+\setpapersize{USletter}
+% \setmarginsrb{〈leftmargin〉}{〈topmargin〉}{〈rightmargin〉}{〈bottommargin〉}%{〈headheight〉}{〈headsep〉}{〈footheight〉}{〈footskip〉}
+\setmarginsrb{1in}{1in}{1in}{1in}{0pt}{0mm}{0pt}{0mm}
+
+\pretolerance=5000
+\tolerance=9000
+
+\graphicspath{{/images/}} % Specify the path to your image files
+
+%
+% Pseudodot: break up "clickable" strings like "Data.gov" which you can
+% enter as Data\pseudodot{}gov in your file.
+% Use this trick in case research.gov misreads text such as "Data.gov" as a clickable hyperlink
+% (even when it isn't).
+%
+\newcommand{\pseudodot}{{\lower 2.4pt\hbox{$\cdot$}}}
+%\def\pseudodot{{\lower 2.4pt\hbox{$\cdot$}}} %% This is the PlainTeX version.
+%
+% On with the show...
+%
+
+\begin{document}
+%
+% Remove page numbers---Research.gov will paginate the document instead
+%
+%\pagestyle{empty} 
+\pagestyle{plain} %% REMOVE THIS LATER
+%
+% Line spacing: 
+% The Proposal and Award Policies and Procedures Guide
+% (PAPPG: https://www.nsf.gov/publications/pub_summ.jsp?ods_key=pappg)
+% mandates, in Chapter 2, section B.2, that the main text should have no more than
+% six lines to the vertical inch. With 72 points per inch, the minimum line skip 
+% would be 12 points.
+%
+\setlength{\baselineskip}{12.6pt} % in text mode
+\setlength{\normalbaselineskip}{12.6pt} % in math mode
+
+
+\begin{tcolorbox}[colback=mycmykcolor, colframe=black, boxrule=1pt, coltext=black]
+\textbf{Project description:} 
+xxx
+\end{tcolorbox}
+
+
+\section{Introduction}
+
+This transformation proposal addresses the key challenge of effectively integrating artificial intelligence (AI) into undergraduate engineering curricula to prepare our graduates for success in the future AI-driven engineering workforce.
+
+Presently, there is a growing demand being placed on CISE departments to teach this material to students from all disciplines. 
+The proposed work will ease that burden by facilitating the teaching of AI topics in engineering-domain-specific courses. 
+
+To do this, the proposed work seeks to develop: 
+
+* engineering-contextualized AI educational resources such as curricula, data sources, and assessments
+
+* educational infrastructure to support sharing such materials across institutions
+
+* and communities of engineering professors trying to upskill in AI topics (groups, workshops, train the trainer, etc)
+
+To ensure that this work supports students form groups historically underrepresented in computing, the project will be a collaborative effort across multiple universities with diverse faculty participation.
+The project team includes a female assistant professor at Penn State, a female associate professor at Texas A\&M University, a Hispanic-serving institution, a female, Asian assistant professor at Tennessee State University, a historically Black college, and a male, Latino associate professor at University of New Mexico, a Hispanic-serving institution. 
+In terms of specific engineering, the PI and CoPIs range across several subdomains. PI Napolitano's research and undergraduate teaching focus on historic preservation and damage diagnostics; CoPI Paal's research and undergraduate teaching focus on risk assessment and modeling structural stability; CoPI Reinhart's research and undergraduate teaching focus on optimized design and control of additive manufacturing processes; CoPI Wang's research and undergraduate teaching focus on building energy modeling; CoPI Moreu's research and undergraduate teaching focus on structural health monitoring. 
+Each faculty member will leverage their domain expertise to develop course modules that showcase practical AI applications in their respective fields. 
+For example, CoPI Paal teaches INSERT PAAL UNDERGRAD CLASS xxx to approximately XXX undergraduate students a year at TAMU, where they will integrate AI-driven risk assessment techniques for natural disasters. 
+Similarly, CoPI Reinhart teaches MATSE 419:TITLE HERE to approximately 40 undergraduate students a year at Penn State; they will develop materials for AI-based design optimization methods such as  XX for additive manufacturing.
+By focusing on these specific technical AI applications within engineering, our project aims to equip engineering students with the practical skills and knowledge needed to apply AI effectively in their future careers.
+
+% By including HBCU, HSI, and underrepresented faculty members,
+
+% This proposal aims to develop professional learning opportunities and contextualized training programs resources for faculty members in engineering domains who lack formal training in computer science (CS) but see the value of teaching artificial intelligence (AI) in their undergraduate classes. 
+% The goal is to provide upskilling pathways and reusable training programs that enable faculty to maximize the benefits of including AI in their undergraduate curricula while minimizing the barriers. 
+
+% The project will involve the creation of contextualized undergraduate educational training programs as well as establish communities for faculty looking to upskill 
+
+
+% and xxx to facilitate critical gaps faced by faculty, especially those from underrepresented minority groups and minority-serving institutions (MSIs). 
+
+% Limited theoretical knowledge of intricate AI concepts like reinforcement learning, generative adversarial networks (GANs), transformer architectures for natural language processing, deep reinforcement learning algorithms (e.g. DQN, A3C, PPO), and advanced techniques like meta-learning, federated learning, and differential privacy poses a significant barrier. Without a strong grasp of these cutting-edge methodologies, faculty cannot fully equip students with an understanding of the latest AI approaches being used in industry and research. Explaining the underlying mathematics, optimization techniques, and architectural intricacies of these advanced models becomes extremely challenging without proper expertise. The resources produced will include curriculum skeletons focusing on advanced AI concepts like reinforcement learning, generative adversarial networks, meta-learning, and federated learning. Additionally, comprehensive guides will be developed on selecting appropriate, unbiased data sources and curating high-quality datasets essential for effective AI training and application development. Assessment exemplars will also be provided to evaluate students' grasp of AI's abstract and mathematically intensive concepts. These educational resources will be specifically designed to equip faculty with the theoretical knowledge and practical skills necessary to broaden participation and foster inclusivity in AI education across diverse institutional settings. 
+
+%% END OF CURRENT INTRO
+
+
+
+However it is important to note that faculty from underrepresented minority groups themselves already struggle with significant burdens that can impede their ability to spearhead curricular innovations like AI integration. These challenges include disproportionate service and mentorship loads, lack of institutional support and resources, implicit biases and marginalization within their academic communities, and the ongoing need to prove their legitimacy and competence in STEM fields. Minority faculty also grapple with the substantial "cultural taxation" of serving as ambassadors and advocates for their underrepresented groups, in addition to their teaching and research responsibilities. This heightened minority tax can leave limited bandwidth to take on new initiatives like redesigning courses to incorporate AI concepts and computational methodologies. 
+
+For minority faculty at MSIs, the barriers are further compounded by severe resource constraints that restrict access to high-performance computational infrastructure, specialized software tools, and high-quality datasets – resources that are essential for effective AI training, modeling, and application development. Furthermore, they contend with systemic challenges in procuring funding and institutional backing for developing AI programs tailored to the unique needs and backgrounds of their diverse student bodies. Compounding these obstacles are the difficulties in attracting, retaining, and nurturing a critical mass of underrepresented students interested in pursuing AI education pathways, stemming from factors such as lack of exposure, role models, and supportive communities within the AI domain. This partnership will ensure that the developed resources and strategies are tailored to the needs of diverse student populations and promote equitable access to state-of-the-art AI education for faculty members.  By creating professional learning communities and providing upskilling opportunities for faculty across diverse institutions, this project aims to equip educators with the necessary knowledge and resources to integrate AI education into their respective engineering domains and prepare a diverse pool of students for careers in the rapidly evolving AI workforce. 
+
+\begin{tcolorbox}[colback=mycmykcolor, colframe=black, boxrule=1pt, coltext=black]
+By studying and creating professional learning opportunities and communities for faculty members in engineering domains to teach AI in their undergraduate classes, this work seeks to: 
+\begin{itemize}
+    \item Develop and implement a targeted faculty upskilling program that provides non-CS faculty, particularly those from underrepresented groups and minority-serving institutions, with the theoretical knowledge and practical skills necessary to effectively integrate advanced AI concepts into their undergraduate engineering curricula.
+    % \item Create a suite of inclusive AI educational resources, including curriculum skeletons, guides on selecting unbiased data sources, and assessment exemplars, that are designed to equip faculty with the tools needed to foster AI literacy and broaden participation among diverse student populations in engineering disciplines.
+    \item Establish and cultivate interdisciplinary learning communities and professional networks across multiple universities, including HBCUs and HSIs, to facilitate collaboration, knowledge sharing, and the development of best practices for integrating AI education into diverse undergraduate institutional settings, ultimately promoting equitable access to cutting-edge AI learning opportunities for underrepresented students.
+    \item Develop resources and provide training to empower minority faculty and faculty at MSIs to effectively communicate the value and importance of integrating AI education into their undergraduate curricula, advocate for institutional support and resources, and navigate potential challenges and barriers within their academic environments.
+\end{itemize}
+\end{tcolorbox}
+
+\section{Background and rationale}
+
+\subsection{The Need for AI Education in Undergraduate Engineering Disciplines}
+
+% WES ADD HERE %%%%%%%%%%%%%%%%%
+AI is rapidly transforming industries across the globe, driving innovations in xxx
+For example, xxx.
+As a result, the demand for AI competencies in the engineering workforce is steadily increasing \cite{li2022reskilling}. 
+Job market analyses consistently show a surge in AI-related positions \cite{MaslejEtAl2023}, with employers seeking candidates who can leverage AI technologies to solve complex, real-world problems \cite{ApolloTechnicalLLC2024}. In the engineering domain, AI skills are becoming increasingly relevant \cite{samavedham2012facilitating, wanyan2019infusing} for applications such as predictive maintenance, autonomous systems, and process optimization.
+Despite the growing importance of AI in engineering, there are significant gaps in AI education within current engineering curricula \cite{ramirez2018engineering}. 
+Considering undergraduate education, a majority of AI-related courses are offered as part of computer science curriculum \cite{MaslejEtAl2023}.
+While these skills are ever increasing in importance across the board, only a small percentage of engineering programs have fully integrated AI concepts into their courses and even that has been mainly at the graduate level \cite{wanyan2017integration, janssen2020multidisciplinary, mishra2020interdisciplinary}.
+
+Previously, PI Napolitano led a successful NSF Harnessing the Data Science Revolution Data Science Corps with the CoPIs Wang (TSU), Moreu (UNM), Paal (TAMU), Solnoksy (PSU), and Reinhart (PSU). The objectives of that project were to (1) facilitate data science education and workforce development for engineering and related topics, (2) provide opportunities for students to participate in practical experiences where they can learn new skills through opportunities in new settings to transform data science education and (3) expand the data science talent pool by enabling the participation of undergraduate students with diverse backgrounds, experiences, skills, and technical maturity. However, as the project progressed, it became evident that there was a significant gap in addressing the rapidly evolving field of AI and its applications across various domains.
+
+\subsection{Barriers to AI Education Integration for Non-CS Faculty}
+
+The integration of AI content into undergraduate engineering programs by non-CS professors is crucial, given the significant shortage of computer science faculty; in 2021, 53\% of computer science, computer engineering, and information faculty positions remained unfilled \cite{MaslejEtAl2023}. Consequently, engineering faculty members are increasingly needed to teach AI-related skills, despite facing significant barriers.
+
+As highlighted by \cite{griffith2020framework}, a faculty member's workload ($W$) comprises three main components: teaching ($T$), service ($S$), and research ($R$), which can be represented by the equation:
+
+\begin{equation}
+    T + S + R = W
+\end{equation}
+
+However, the time devoted to teaching extends beyond merely the hours spent in the classroom. It encompasses the time spent physically teaching the course ($T_C$), the administrative work related to teaching ($T_A$), and the total preparation time required ($T_P$). Furthermore, $T_A$ should account for the number of semester credits taught and be multiplied by a factor representing the number of students in each class. Therefore, the equation becomes:
+
+\begin{equation}
+    T_C + T_A + T_P + R + S = W
+\end{equation}
+
+AI and ML courses are highly popular and tend to fill up quickly, potentially increasing the value of $T_A$ compared to traditional domain courses. Moreover, the rapid evolution of the AI field necessitates continuous knowledge updates for instructors, significantly increasing the preparation time ($T_P$). Consequently, the equation can be modified as follows:
+
+\begin{equation}
+    T_C + T_A + \alpha T_P + R + S = W
+\end{equation}
+
+where $\alpha$ is a factor representing the additional preparation time required for AI and ML courses.
+
+However, this equation does not account for the time needed for upskilling ($T_U$), which is particularly relevant when faculty members lack prior knowledge or formal training in AI and ML. In such cases, they must allocate additional time for upskilling themselves in these domains, leading to the following equation:
+
+\begin{equation}
+    T_C + T_A + \alpha T_P + T_U + R + S = W
+\end{equation}
+
+Addressing these barriers to learning new material, creating new courses, and teaching AI and ML content requires institutional support and dedicated resources, such as professional development opportunities, course release time, and access to relevant educational materials and expertise.
+
+Failure to mitigate these challenges could result in suboptimal learning experiences for students, as faculty members may struggle to keep up with the latest developments in AI while balancing their existing teaching and research responsibilities. Assuming a fixed number of working hours ($W$), they are forced to reduce their research ($R$), service ($S$), or preparation time ($T_P$) to accommodate the additional time required for upskilling and teaching AI and ML courses.
+
+Furthermore, the challenges faced by minority faculty members (MFM) and those teaching at MSIs are compounded. Numerous publications have documented higher service loads for diverse faculty and faculty at diverse institutions \cite{hanasono2019secre, o2017asked}. This can be represented by introducing a factor $\beta$ to account for the increased service load:
+
+\begin{equation}
+    T_C + T_A + \alpha T_P + T_U + R + \beta S = W
+\end{equation}
+
+
+% \begin{wrapfigure}{r}{0.5\textwidth}
+%     \centering
+% \includegraphics[width=0.5 \textwidth]{images/workload.png}\\
+%     \caption{xxx}
+%     \label{fig:workload}
+% \end{wrapfigure} 
+
+
+Evaluations of teaching experiences at MSIs have also found that professors often need to dedicate more hours to student learning \cite{conrad2015educating} due to systemic inequalities perpetuated in primary education. This can be represented by introducing a factor $\gamma$ to account for the increased administrative work related to teaching:
+
+\begin{equation}
+    T_C + \gamma T_A + \alpha T_P + T_U + R + \beta S = W
+\end{equation}
+
+
+So, if we were to compare the workloads of a non-MFM at a non-MSI institution with a MFM at an MSI that would be: 
+
+\begin{equation}
+    \Delta W = (1-\gamma)T_A + (1-\alpha) T_P + (1-\beta) S
+\end{equation}
+
+Using this equation, we can assume that a nonMFM/MSI faculty member spends 5 hours per week on teaching activities ($T_A$), preparation ($T_P$), and service ($S$). Furthermore, we can assume that an MFM at an MSI spends 30\% more time on these activities compared to a nonMFM/MSI faculty member. Based on these assumptions, the difference in the amount of extra time spent on $T_A$, $T_P$, and $S$ between an MFM at an MSI and a nonMFM/MSI faculty member is 10.5 hours.
+And let's look at this another way. 
+Assume that both faculty members can spend a maximum of 40 hours per week on work, and both spend 5 hours per week on $T_C$ $T_U$. 
+Given these assumptions, the nonMFM/MSI faculty member can spend 20 hours per week on research (40 hours - 5 hours for $T_A$, $T_P$, and $S$ - 5 hours for $T_C$ and $T_U$ = 20 hours for research). However, the MFM at an MSI can only spend 9.5 hours per week on research (40 hours - 15.5 hours for $T_A$, $T_P$, and $S$ - 5 hours for $T_C$ and $T_U$ = 9.5 hours for research).
+Considering these compounding challenges, it becomes evident that asking minority faculty members and those at MSIs to integrate AI and ML education into their curricula may be an unrealistic expectation without substantial institutional support and dedicated resources to alleviate their existing workloads.
+
+
+As mentioned above, PI Napolitano already led a successful NSF project where faculty were asked to include data science topics in their engineering courses. 
+During this experience the friction between the time for teaching activities and the time for research activities became apparent. Semi-structured interviews with faculty members included the following responses: 
+
+\begin{quote}
+``As someone without a strong background in computer science or statistics, a lot of the data science concepts were completely new to me. I spent a lot of time watching online tutorials just to grasp the fundamentals. Balancing this self-learning with my regular teaching and research duties was incredibly demanding on my time and mental bandwidth."
+
+``As a junior faculty member, I was already stretched thin. Learning data science felt like an added burden that I had to take on during evenings and weekends. I remember countless nights staying up late, poring over coding tutorials. It was a steep learning curve, and I often felt isolated."
+
+\end{quote}
+
+
+Based on the anecdotes from faculty members and the challenges they faced in upskilling to incorporate data science concepts into their curricula, it became evident that curriculum development alone was not sufficient. 
+Many faculty members, particularly those from underrepresented groups or at minority-serving institutions, struggled to find the time and mental bandwidth required to learn and master the necessary data science techniques. The demands of balancing teaching, research, and service commitments, coupled with the steep learning curve and lack of support structures, created significant barriers to successful curriculum integration.
+It became clear that in addition to developing new curricula, a comprehensive approach was required to equip faculty with the resources, training, and support needed for effective upskilling. This should include providing access to professional development opportunities, such as workshops, online tutorials, and mentorship programs, specifically tailored to the unique needs and challenges faced by faculty members from diverse backgrounds.
+Furthermore, the project highlighted the importance of empowering faculty to effectively communicate the value and benefits of integrating data science and now AI concepts into their curricula during annual evaluations and tenure/promotion processes. Many faculty members expressed concerns about the potential negative impacts of dedicating significant time and effort towards curriculum development and upskilling on their research productivity and career advancement prospects.
+To address these concerns, resources and guidance are needed to help faculty articulate the significance of these initiatives, demonstrate their alignment with institutional goals, and highlight the potential positive impacts on student learning outcomes and workforce preparation. By equipping faculty with the tools to effectively convey the benefits during annual evaluations and tenure/promotion processes, we can better advocate for the recognition and support needed to pursue these curricular innovations.
+
+\subsection{Best Practices in Faculty Professional Development and Upskilling To Broadening Participation}
+
+There has been a good deal of research done on best practices for faculty upskilling considering the rapid need for remote teaching and learning skills in the COVID-19 pandemic \cite{zeivots2021hybrid, laloo2020teaching, calonge2022contactless}.
+\cite{macphail2019professional} examined the professional development of higher-education based teacher educators through semi-structured interviews and surveys and saw the gap between wanting to upskill and not having the time or institutional support \cite{macphail2019professional}. 
+There are several findings from \cite{macphail2019professional} which will be used as a framework to build this proposed work off of.
+
+A first item of note is that this study found evidence of a need for specific professional development materials. 
+"One teacher educator commented on the more generic audiences for professional learning opportunities, at the expense of a dearth of professional learning opportunities for teacher educators, ‘(…) my level of satisfaction wouldn’t be as high with the generic opportunities that are afforded to academics generally’" \cite{macphail2019professional}. 
+
+A related outcome of this work was that specific peer-learning communities across institutions are a preferred way to increase teacher educators' skills and knowledge \cite{macphail2019professional} as there can be a lack of necessary topical expertise within one institution or there could be issues of competition.
+
+\subsection{Current gaps and limitations}
+
+% While 
+% SO WHAT IS THE GAP WE ARE FILLING? COME BACK AND DO THIS WHEN THE REST OF THE INTRO / BACKGROUND IS DONE
+
+% * Discussion of relevant theoretical frameworks that inform the design of the faculty upskilling program and learning communities
+% * Explanation of how these frameworks support the development of inclusive AI educational resources and the cultivation of equitable learning opportunities for underrepresented students
+
+
+Based on previous work, this proposal aims to fill the following key gaps in AI education for undergraduate engineering faculty:
+
+\begin{gitemize0}
+\item Lack of tailored professional development resources and upskilling opportunities for non-CS engineering faculty to effectively integrate advanced AI concepts into their undergraduate curricula.
+\end{gitemize0}
+
+\begin{gitemize3}
+\item Absence of interdisciplinary learning communities and professional networks across diverse institutions to facilitate collaboration, knowledge sharing, and the development of best practices for integrating AI education into various undergraduate settings.
+\end{gitemize3}
+
+\begin{gitemize2}
+\item Insufficient support and resources for minority faculty and those at MSIs to effectively advocate for the importance of AI education integration, secure institutional backing, and navigate challenges within their academic environments.
+\end{gitemize2}
+
+The literature review highlights the increasing demand for AI competencies in the engineering workforce and the significant gaps in AI education within current engineering curricula. It also emphasizes the barriers faced by non-CS faculty, especially those from underrepresented groups and MSIs, in upskilling and integrating AI concepts into their courses due to higher teaching, service, and administrative loads.
+This work builds upon the lessons learned from a previous NSF project on data science education, which revealed the need for comprehensive support, tailored resources, and professional development opportunities for faculty to successfully integrate new concepts into their curricula.
+This proposal aims to broaden participation and promote equitable access to cutting-edge AI learning opportunities for underrepresented students in engineering disciplines by addressing these gaps through targeted upskilling programs, interdisciplinary learning communities, and empowering faculty to advocate for AI education integration.
+By collaborating with faculty members from various institutional backgrounds and underrepresented groups, this approach ensures that the AI skills and knowledge taught in engineering curricula are inclusive and accessible to students from different backgrounds.
+Engaging with minority faculty and those from HBCUs and HSIs brings valuable perspectives and experiences to the table; this collaboration can help address the specific barriers and challenges faced by these undergraduates at these institutions as well as faculty teaching undergraduate student groups in accessing and succeeding in AI-related fields, ultimately promoting diversity and inclusion in the AI workforce.
+
+\section{Fundamental research questions and intellectual merit} 
+The intellectual merit of this proposal lies in its approach to addressing the barriers and challenges faced by non-CS faculty, particularly those from underrepresented groups and minority-serving institutions, in integrating AI education into their undergraduate engineering curricula. By examining the most effective strategies for upskilling faculty members and establishing interdisciplinary learning communities, this study contributes to the growing body of knowledge on best practices for AI education integration in diverse institutional settings.
+Furthermore, by investigating these issues and developing strategies to empower faculty in navigating their academic environments, this study adds to the understanding of the systemic barriers that hinder the advancement of AI education in underrepresented communities.
+The research questions posed in this proposal are grounded in the identified gaps in existing literature and the lessons learned from previous NSF projects on data science education. By addressing the following questions, the study aims to generate new insights and practical recommendations that can inform future efforts to broaden participation and promote equitable access to AI education in undergraduate engineering programs.
+
+\begin{tcolorbox}[colback=mycmykcolor, colframe=black, boxrule=1pt, coltext=black]
+\begin{enumerate}
+    \item What are the most effective strategies for upskilling faculty members who lack formal training in computer science or AI, particularly those from underrepresented groups or teaching at minority-serving institutions? and subsequently, 
+
+    \item How can interdisciplinary learning communities and professional networks support faculty in incorporating AI education into their respective domains in diverse institutional settings? 
+
+    \item How can minority faculty and faculty at MSIs effectively advocate for the integration of AI education into their curricula, secure institutional support and resources, and navigate potential challenges within their academic environments?
+
+\end{enumerate}
+\end{tcolorbox}
+
+By rigorously investigating these questions, the project has the potential to yield valuable insights and practical strategies for promoting inclusive AI education across various engineering and scientific disciplines. The findings and educational resources developed can inform curriculum design, faculty training programs, and institutional policies, ultimately broadening participation and fostering equity in AI education for a diverse student population. Addressing the professional development needs of faculty, especially those from underrepresented backgrounds, is a crucial step towards democratizing access to cutting-edge AI knowledge and skills. 
+
+The findings and insights gained from this study will be highly translatable to other educational contexts and disciplines beyond undergraduate engineering programs studied. The strategies developed for upskilling faculty members, particularly those from underrepresented groups and minority-serving institutions, can serve as a model for other STEM fields looking to integrate emerging technologies into their undergraduate curricula. The best practices identified for establishing interdisciplinary learning communities and professional networks can be adapted and implemented in various academic settings, fostering collaboration and knowledge sharing across institutions and disciplines.
+Moreover, the lessons learned from empowering minority faculty and those at MSIs to advocate for the integration of AI education and navigate institutional challenges will have broad implications for promoting diversity, equity, and inclusion in higher education. The strategies and recommendations developed through this study can inform efforts to support and empower underrepresented faculty members in other disciplines and institutional contexts, helping to dismantle systemic barriers and create more inclusive academic environments.
+By documenting and disseminating the findings, tools, and resources developed through this project, we aim to create a ripple effect that extends beyond the immediate scope of the study;  other institutions, departments, and faculty members can leverage these resources to inform their own efforts to integrate AI education and support underrepresented groups in their respective fields. This translational potential amplifies the impact of the project, contributing to the broader goal of preparing a diverse workforce with the AI competencies needed to drive innovation and address complex societal challenges.
+
+
+\section{Research plan and preliminary results for each task} The project will be based at Penn State University (PSU). It is coordinated by PI Rebecca Napolitano (PSU – Architectural Engineering). The work is comprised of xxx tasks.
+
+
+\begin{tcolorbox}[colback=mycmykcolor, colframe=black, boxrule=1pt, coltext=black]
+\textbf{Task 1: Knowledge Base Development:} This task will focus on xxx.
+\end{tcolorbox}
+
+* Conduct a specific review of literature on the challenges and barriers faced by non-CS faculty, particularly those from underrepresented groups and MSIs, in integrating AI education into their curricula.
+* Analyze existing data on faculty workloads, service loads, and time constraints, with a focus on non-CS disciplines and diverse institutional contexts.
+* Conduct a comprehensive survey of relevant literature on AI education, faculty professional development, and broadening participation in computing
+* Summarize key findings and lessons learned from prior work, including any previous NSF-funded projects that this proposal builds upon
+* Establish the knowledge base and theoretical foundations for the proposed project
+
+
+Table xxx lays out the milestones, key outcomes, and success criteria for each milestone. 
+
+\begin{tcolorbox}[colback=mycmykcolor, colframe=black, boxrule=1pt, coltext=black]
+\textbf{Task 2:Project Management and Evaluation:} This task will focus on xxx.
+\end{tcolorbox}
+* Establish a project management structure and timeline to ensure the successful execution of all tasks and deliverables
+* Assemble an advisory board of experts in AI education, faculty development, and broadening participation to provide guidance and feedback
+* Identify and collaborate with an independent evaluator or qualified project team members to design and implement a rigorous evaluation plan aligned with project goals and activities
+* Regularly report on the project's progress, challenges, and external critical review process to inform ongoing improvements and decision-making
+
+Table xxx lays out the milestones, key outcomes, and success criteria for each milestone. 
+
+\begin{tcolorbox}[colback=mycmykcolor, colframe=black, boxrule=1pt, coltext=black]
+\textbf{Task 3:Faculty Upskilling Program Development:} This task will focus on xxx.
+\end{tcolorbox}
+
+* Assessment of faculty work hours, priorities, and practical time for this
+*Conduct a needs assessment survey or focus groups with non-CS faculty to understand their specific barriers, time constraints, and resource needs for upskilling in AI education.
+* Develop flexible and modular upskilling resources that can be tailored to different levels of prior knowledge and time availability for faculty.
+* Incorporate strategies for time management, workload prioritization, and work-life balance into the upskilling program, recognizing the time constraints faced by faculty.
+* Develop strategies for building awareness and garnering buy-in from institutional leadership, colleagues, and other stakeholder as well as negotiation and conflict resolution approaches to address resistance or roadblocks within the academic environment.
+* Collaborate with experts in faculty development and diversity, equity, and inclusion to ensure the upskilling program addresses the unique challenges faced by underrepresented faculty and those at MSIs.
+* Design tailored educational resources and curriculum skeletons to bridge critical gaps in AI knowledge for faculty from non-CS backgrounds
+* Develop guides on selecting appropriate, unbiased data sources and curating high-quality datasets for effective AI training and application development
+* Create assessment exemplars to evaluate students' grasp of AI's abstract and mathematically intensive concepts
+* Collaborate with faculty from underrepresented minority groups and minority-serving institutions to ensure resources are inclusive and address their unique challenges
+
+
+Table xxx lays out the milestones, key outcomes, and success criteria for each milestone. 
+
+\begin{tcolorbox}[colback=mycmykcolor, colframe=black, boxrule=1pt, coltext=black]
+\textbf{Task 4:Interdisciplinary Learning Community Cultivation:} This task will focus on xxx.
+\end{tcolorbox}
+* Facilitate the creation of professional learning communities and networks for faculty to share knowledge, resources, and best practices for integrating AI education into their respective domains
+* Facilitate mentorship opportunities between experienced AI educators and non-CS faculty new to the field, with a focus on time management, workload balancing, and effective teaching strategies.
+* Organize workshops, seminars, and virtual collaboration spaces to support ongoing faculty development and community building
+
+
+Table xxx lays out the milestones, key outcomes, and success criteria for each milestone. 
+
+\begin{tcolorbox}[colback=mycmykcolor, colframe=black, boxrule=1pt, coltext=black]
+\textbf{Task 5:Inclusive AI Curriculum Implementation, Translation, and Evaluation:} This task will focus on xxx.
+\end{tcolorbox}
+
+* Pilot the developed AI educational resources and curriculum skeletons in diverse institutional settings
+* Collect data on faculty workload, time allocation, and resource utilization during the pilot implementation phase, with a focus on identifying potential bottlenecks or areas of excessive burden.
+* Collect data on student learning outcomes, engagement, and perceptions of the AI curricula
+* Evaluate the effectiveness of the upskilling program and interdisciplinary learning communities in promoting inclusive AI education and broadening participation
+* Evaluate the effectiveness of the upskilling program and learning communities in addressing the time constraints and unique challenges faced by non-CS faculty, particularly those from underrepresented groups and MSIs.
+* Refine and iterate on the resources and strategies based on evaluation findings
+
+
+Table xxx lays out the milestones, key outcomes, and success criteria for each milestone. 
+
+\begin{tcolorbox}[colback=mycmykcolor, colframe=black, boxrule=1pt, coltext=black]
+\textbf{Task 6: Dissemination and Sustainability Planning:} This task will focus on xxx.
+\end{tcolorbox}
+
+* Develop a comprehensive dissemination plan to share project findings, resources, and best practices through conferences, workshops, publications, and virtual communities
+* Ensure all new materials are released under Creative Commons licensing and computer code is shared under an appropriate intellectual property license
+* Create a sustainability plan to ensure the continued impact and scalability of the project efforts beyond the funding period
+* Explore partnerships with industry, professional organizations, and other stakeholders to support the long-term viability of inclusive AI education initiatives
+
+
+% \begin{table}[H]
+% \captionsetup{font=small}
+% \caption{\textit{Key milestones, outcomes, and success criteria for community engagement. "Nap" indicates that PI Napolitano will be leading this segment of the project.}}
+% \label{tab:t1}
+% \centering
+% \small % Set the font size to 10 points
+% \begin{tabular}{|p{2cm}|p{13cm}|}
+% \hline
+% \textbf{Milestone} & \textbf{Key Outcome and Success Criteria} \\
+% \hline
+% Subtask 1.1 Nap & \textbf{Archival work}: Completed archival work summarizing TEK and TBK from relevant sources. \\
+% \hline
+% Subtask 1.2 Nap + Chi & \textbf{Engagement strategy}: Engagement strategy developed that includes methods for involving community members in the research process. \\
+% \hline
+% Subtask 1.3 Nap + Chi & \textbf{Stakeholder analysis}: Identify key stakeholders within the communities related to TEK and TBK and establish contact; additional archival work conducted based on initial findings. \\
+% \hline
+% Subtask 1.4 Nap + Chi & \textbf{Organize community} Introduce the research,  gather input, update key stakeholders based on community feedback. \\
+% \hline
+% \end{tabular}
+% \end{table}
+
+Table xxx lays out the milestones, key outcomes, and success criteria for each milestone. 
+
+\subsection{Expected significance}: 
+By developing effective strategies for upskilling faculty members and establishing interdisciplinary learning communities, this study advances the theoretical understanding of how to successfully integrate AI education into undergraduate curricula, particularly in diverse institutional settings. The research findings will also contribute to the development of innovative methodologies for faculty professional development, curriculum design, and assessment of AI competencies in engineering education. The expected outcomes of this research include the advancement of theory and methodology related to AI education integration, faculty upskilling, and promoting diversity and inclusion in STEM fields. The insights gained from this study will inform the development of evidence-based policies, guidelines, and practices for supporting faculty members, particularly those from underrepresented groups and minority-serving institutions, in integrating AI education into their curricula. These practical implications will help institutions and departments create more inclusive and equitable learning environments, foster interdisciplinary collaboration, and prepare a diverse student population for success in the AI-driven workforce. In the long term, this research has the potential to catalyze systemic change in higher education, breaking down barriers and promoting equitable access to AI education for underrepresented students in engineering and beyond. By empowering minority faculty and those at MSIs to advocate for AI education integration and secure institutional support, this study contributes to the larger goal of diversifying the AI workforce and ensuring that the benefits of AI technologies are accessible to all communities. The translatable strategies and resources developed through this project will have a lasting impact, enabling institutions across the nation to effectively integrate AI education and support underrepresented groups in STEM fields, ultimately driving innovation, economic growth, and societal progress.
+
+\section{Project management}
+Approach to organization and management: PI will be responsible for overall management of project execution.  PI will work with the project CoPIs to oversee project progress and performance and ensure that reporting requirements are completed.  The project will implement a scaled Earned Value Management plan. On an annual basis, an accounting of earned value to date and related standard performance metrics will be completed by PI and reported. The financial aspects of the project will be managed through Penn State’s System for Integrated Management, Budgeting, and Accounting (SIMBA). 
+\subsection{Roles of each team member}
+To ensure the success of the proposed work, faculty members with ranging expertise have been brought together. 
+
+Wes as AI person in general + materials
+
+Stephanie as AI in civil
+
+Becca and Ryan as education people
+
+Zufen as emerging AI in energy
+
+Becca as emerging AI in architectural
+
+Fernando as emerging AI in health monitoring 
+
+DEI expert?
+
+The resumes of each partner highlight in detail the prior accomplishments in both the education and research realms which will provide a strong foundation for this project. 
+
+
+\subsection{Technical and management aspects}
+Final control of all project financial elements rests with the PI and AB and with oversight from NSF PM.  The PI will, at the project outset, establish all necessary and prudent financial procedures and controls, reporting requirements, and communication chains. All funds received will be recorded and deposited in accordance with approved PSU protocols. Expenditures and budgets will be approved via the established chain and tiers of approval. Financial records will be maintained in accordance with generally accepted accounting guidelines and federal and university policies. These records and reports will be made available to AB and NSF staff. Detailed and complete financial and progress reports and any audits mandated will be filed on a schedule as dictated by NSF.
+
+\subsection{Risk analysis and mitigation strategies}
+
+
+Strength, Weakness, Opportunities, Threats (SWOT) analysis recognizes that there are both internal and external factors that can affect the success of a project and enables a project team to ensure the feasibility of the overarching program. 
+Table xxx breaks down the strengths and weaknesses as well as the opportunities and threats for the project into four quadrants. 
+
+% \begin{tabularx}{\textwidth}{|c|X|X|}
+% \hline
+% & Opportunity & Threat \\
+% \hline
+% Strength & \begin{itemize}
+%             \item item
+%             \item item
+%            \end{itemize} & \begin{itemize}
+%                            \item item
+%                            \item item
+%                            \end{itemize} \\
+% \hline
+% Weakness & \begin{itemize}
+%             \item item
+%             \item item
+%            \end{itemize} & \begin{itemize}
+%                            \item item
+%                            \item item
+%                            \end{itemize} \\
+% \hline
+% \end{tabularx}
+
+\begin{tabularx}{\textwidth}{|c|X|X|}
+\hline
+& Opportunity & Threat \\
+\hline
+Strength & \textit{Capitalize}: on diverse topics at the intersection of engineering and AI in the group to ensure a broad as well as deep, rich curriculum.  & \textit{Monitor}: how the curriculum modules fit together and how to incentivize curricular updates. We need to ensure that the training modules are curated to minimize effort duplication. We need to motivate why teachers should update their curricula and ensure that adoption is as easy as possible. \\
+\hline
+Weakness & \textit{Improve}: classes which are not prepared for hybrid environments (mix of virtual and in person) to ensure maximum accessibility.  & \textit{Eliminate}: pressure to focus on technical research only and not educational research by providing funding and time dedicated specifically for it.  \\
+\hline
+\end{tabularx}
+
+
+In addition to the SWOT above, the following risk management systems have been enacted as a risk management approach. This project is moderately low risk as it has a risk score of 38 on a scale from 0 to 100 (30 points earned out of 80). The risk assessments will be updated by PI at each milestone to mitigate these risks and track progress along the WBS. Table 2 presents the risk register for the project, a ranked list of identified project risks including risk impact analysis (risk probability and impact), strategy planning along with prioritization, mitigation plan, and distribution of roles and responsibilities. The risks include technical, cost, quality and timeline risks.  
+
+ADD IN RISK CHART FROM DOE: 
+
+
+\subsection{Project timeline, assessment, and feasibility} The proposed timeframe is August 2025-August 2028. Estimates for scheduling will be intentionally conservative and critical path dependencies have been avoided where possible (Fig. ~\ref{fig:timeline}). Schedule and task progress will be closely monitored by the Co-PIs using Microsoft Teams and Planner applications, provided through PSU accounts. 
+
+\begin{figure}[h]
+\centering
+  \includegraphics[width=\textwidth]{images/timeline2.png}
+  \captionsetup{justification=centering, singlelinecheck=false, font=small}
+  \caption{\textit{Gantt diagram illustrating the individual milestones which all have their own assessment points defined above.}}
+  \label{fig:timeline}
+\end{figure}
+
+\subsection{Methods of communitication}
+
+\customsection{Broader impacts} 
+
+This proposal seeks to directly address the need for inclusive and equitable AI education by providing professional development opportunities for faculty members, particularly those from non-computer science disciplines and minority-serving institutions. The core initiative involves upskilling faculty who lack formal training in computer science or AI, equipping them with the knowledge and resources necessary to integrate AI education into their respective engineering curricula effectively. By developing inclusive AI curricula skeletons, guides on utilizing unbiased data sources, and assessment examples, the project empowers faculty to create tailored AI learning experiences for underrepresented and underserved student populations. This faculty upskilling approach, coupled with the cultivation of interdisciplinary learning communities across multiple universities, including Historically Black Colleges and Universities (HBCUs) and Hispanic-Serving Institutions (HSIs), ensures that AI education pathways are designed to meet the diverse needs of students. This work breaks down barriers and provides more equitable access to cutting-edge AI learning opportunities, fostering a diverse and skilled AI workforce prepared to develop ethical and socially responsible AI solutions.
+
+\subsection{Potential for benefiting society through transformative concepts} 
+
+\subsection{Plan for proposed activities and mechanisms to assess success} 
+
+\subsection{Qualifications and resources to ensure the success of broader impacts}
+
+\section{Results from prior NSF support}  
+
+\subsection{PI Napolitano} (a) IIS-2123343, 10/21 - 9/25, \$1,127,957 (b) HDR DSC: Infusion of data science and computation into engineering curricula (c) Intellectual merit: Developing course modules for infusing community-focused data science into engineering curricula. Broader impacts: This research will result in novel methods for educating undergraduate students and provide access to computational education resources for traditionally underrepresented students in computing. (d) This ongoing work has resulted in academic dissemination including educational research \cite{asdetranslating2023,wfrwnapolitano,rnrncomp} and domain-specific research used to collect data for the curriculum \cite{farnod2022b,
+    farnod2023a,
+    farnod2022c,
+    alam2023a,
+    alam2022,
+    paulino2021b,
+    paulino2022reviver,
+    paulino2023automating,
+    farnod2022towards,
+    paulino2021grammar,
+    farnod2023displacement,
+    saleem2023analysis,
+    alam2023data}
+(e) Additionally, this ongoing work has resulted in the main academic product, a website.
+This website provides information about a data science program offering six courses tailored for engineering students. These courses cover a range of crucial topics, including advanced data science, engineering ethics, data management, machine learning, parametric modeling, and an introduction to data science for engineers (Figure~\ref{fig:website}). This comprehensive curriculum equips engineering students with the essential skills and knowledge required to excel in the data-driven world, addressing both technical aspects and ethical considerations within the field of data science. (f) Renewal is not applicable. 
+
+% The References Cited section would normally begin a new page:
+\newpage
+
+\bibliography{biblio.bib} 
+
+\end{document}

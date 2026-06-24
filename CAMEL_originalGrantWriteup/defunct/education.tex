@@ -1,0 +1,375 @@
+\documentclass[11pt]{article} 
+\usepackage{bm} % If you want bold math, but without the bloat of AMS packages
+\usepackage{tabularx}
+\usepackage{colortbl}
+%\usepackage[pattern=std, patternsize={1in}]{gridpapers}
+\usepackage{color} % doh
+\usepackage{hyperref} % LaTeX cross references become hyperlinks in pdf output
+\usepackage{graphicx} % For figure insertion
+\usepackage{wrapfig} % for wrapping the figure
+\usepackage{subcaption}
+\usepackage{vmargin} % To set page size
+\usepackage{mathrsfs}
+\usepackage{float}
+\usepackage{soul}
+%\usepackage{hyperref}
+%\usepackage[options]{nohyperref} 
+\usepackage{enumitem}
+\linespread{0.901}
+\usepackage[svgnames]{xcolor}  % Load xcolor with predefined color names
+\usepackage[most]{tcolorbox}   % Load tcolorbox package
+% \definecolor{mycmykcolor}{cmyk}{0.45,0.30,0.20,0}
+\definecolor{mycmykcolor}{cmyk}{0, 0, 0.22, 0}
+\definecolor{secondary}{cmyk}{0,0,0,0.20} 
+
+\usepackage{titlesec}
+\titleformat{\section}[runin]{\normalfont\bfseries}{\thesection}{1em}{}[]
+\titlespacing*{\section}{0pt}{\baselineskip}{1ex}
+
+\titleformat{\subsection}[runin]{\normalfont\bfseries}{\thesubsection}{1em}{}[:]
+\titlespacing*{\subsection}{0pt}{\baselineskip}{1ex}
+
+% Define a custom command to format section titles with a new line
+\newcommand{\customsection}[1]{%
+  \titleformat{name=\section,numberless}[runin]{\normalfont\bfseries}{}{0pt}{\newline}[ ]%
+  \section{#1\newline}%
+}
+
+
+\newlist{gitemize0}{itemize}{4}
+\setlist[gitemize0,1]{
+    leftmargin=\dimexpr1cm+\labelsep\relax,
+    label={\smash{\raisebox{-0.45cm\height}{\includegraphics[width=0.8cm]{synergy.png}}}}
+}
+
+\newlist{gitemize3}{itemize}{4}
+\setlist[gitemize3,1]{
+    leftmargin=\dimexpr1cm+\labelsep\relax,
+    label={\smash{\raisebox{-0.55cm\height}{\includegraphics[width=0.8cm]{planning.jpeg}}}}
+}
+\newlist{gitemize2}{itemize}{4}
+\setlist[gitemize2,1]{
+    leftmargin=\dimexpr1cm+\labelsep\relax,
+    label={\smash{\raisebox{-0.55cm\height}{\includegraphics[width=0.8cm]{capacity.png}}}}
+}
+
+\newlist{gitemize4}{itemize}{4}
+\setlist[gitemize4,1]{
+    leftmargin=\dimexpr1cm+\labelsep\relax,
+    label={\smash{\raisebox{-0.55cm\height}{\includegraphics[width=0.8cm]{path.jpeg}}}}
+}
+
+
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage[square,sort&compress]{natbib}
+\bibliographystyle{unsrtnat} % Use the style of your choice
+\setcitestyle{numbers, square, comma, sort&compress}
+
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+
+\setpapersize{USletter}
+
+\setmarginsrb{1in}{1in}{1in}{1in}{0pt}{0mm}{0pt}{0mm}
+
+\pretolerance=5000
+\tolerance=9000
+
+\graphicspath{{/images/}} % 
+\newcommand{\pseudodot}{{\lower 2.4pt\hbox{$\cdot$}}}
+
+\usepackage{lineno}
+%\linenumbers
+
+\begin{document}
+
+\pagestyle{plain}
+\setlength{\baselineskip}{12.6pt} % in text mode
+\setlength{\normalbaselineskip}{12.6pt} % in math mode
+
+\section{notes}
+
+Cultivating global consciousness is a learning practice that promotes knowledge of diverse worldviews as well as critically examining 
+
+\section{Background and rationale:}
+
+The rapid advancement of AI is transforming numerous industries, including EM, by enabling powerful new capabilities for design optimization, control systems, predictive maintenance, disaster mitigation, climate change adaptation, and more.
+This is evidenced by statistics such as the fact that 81\% of engineering companies surveyed by the World Economic Forum said that they would be incorporating AI into their workflows by 2025 \cite{WEF2020} and that a bipartisan senate committee recommended the US spend at least \$32 billion over the next three years to develop AI and related safeguards \cite{seddiq2024schumers}.
+As AI becomes increasingly integrated into engineering practices, the reciprocal relationship between AI and engineering must be considered.
+In their 2020 opinion piece, Johri pointed out the two way information transfer between AI and engineers.  They said that AI ``embeds the idea of how engineers, among others, see the world; these embedded ideas, in turn, shape the work in which they live"  \cite{johri2020artificial}.
+This perspective highlights the importance of engineers' roles in shaping AI systems and the subsequent impact of these systems on the engineering profession and society at large.
+Continuing on, Johri emphasized that this is a burden engineering educators need to be cognizant of as it is not insignificant \cite{johri2020artificial}.
+
+\textbf{These pathways need to be crafted so that students are not only users of AI but also responsible creators and problematizers. }
+Students must learn how to effectively leverage and apply existing AI tools and techniques within their EM domains; this involves understanding AI systems' capabilities and limitations, as well as how to interpret and utilize their outputs.
+In the context of natural disaster recovery, EM students can learn to apply AI techniques for predicting and assessing structural damage caused by earthquakes. By leveraging machine learning models trained on historical seismic data, satellite imagery, and building information, students can develop AI-powered tools to quickly identify and prioritize areas most severely affected by an earthquake. This can help emergency responders and recovery teams allocate resources more efficiently and effectively in the aftermath of a disaster.
+Beyond just using AI, EM students need to develop the skills to build and develop new AI models and applications tailored to the unique challenges and requirements of their field; this includes tasks such as data preprocessing, model training, and system integration. 
+Building on the application of AI for earthquake damage assessment, EM students can develop new AI models that not only predict structural damage but also suggest optimal repair and reconstruction strategies. By integrating data on building materials, construction techniques, and local environmental factors, students can create AI systems that generate customized, cost-effective, and resilient repair plans for damaged structures. These AI models could also be extended to assist in the design and construction of new buildings, optimizing their ability to withstand future seismic events.
+Perhaps most importantly, EM students must be equipped with the critical thinking skills to scrutinize and question AI systems, identifying potential biases, ethical concerns, or societal impacts. 
+For example, if the AI models are trained on data from predominantly urban areas, they may not accurately predict or address the unique challenges faced by rural or underprivileged communities affected by earthquakes. Additionally, students must consider the potential privacy and security concerns associated with collecting and analyzing large amounts of data on individuals' homes and properties.
+
+As the creators and implementers of AI in EM contexts, they will play a crucial role in shaping the responsible development and deployment of these technologies.
+To prepare students to engage AI effectively in engineering careers, it is crucial that undergraduate EM programs integrate use, creation, and problematization \cite{masschelein1998imagine} of AI-related knowledge and skills into the curriculum \cite{carvalho2022can, dimitriadou2023critical}. 
+By emphasizing all three aspects--use, creation, and problematization--engineering programs can produce graduates who are not just passive consumers of AI, but active and informed participants in shaping the future of AI-driven engineering practices. 
+\textbf{This holistic approach aims to cultivate a generation of engineers who can harness AI's power while navigating its complexities.
+}
+While this contextualization is important, most AI education still occurs within computer science departments, creating a gap in providing engineering students the domain-specific AI competencies they will need in the workforce.
+One issue with having engineering students learn AI in computer science courses is knowledge retention \cite{menekse2023envisioning}. 
+Numerous engineering students have enrolled in computer science classes about data science and AI; however, in major faculty have reported concerns about knowledge retention and translation \cite{guzdial2010does, kay2011contextualized}.
+Directly integrating AI education with field-specific expertise can offer recognized advantages \cite{guzdial2010does, mohammadi2020experiential}. However, there are many barriers to this, such as limited credit allowances within programs, making it difficult to accommodate new materials, and many current faculty lack training or expertise in AI, hindering their ability to teach the subjects. 
+Another concern is that computer science as a field has historically suffered from underrepresentation of certain racial and ethnic minority groups, women, and other marginalized populations \cite{aspray2016broadening, beyer2014women, scott2017broadening, charleston2014navigating}. 
+Since AI education has been concentrated in computer science programs, it inherently limits the exposure and participation of underrepresented students in this area. 
+As AI integrates across engineering disciplines, it is essential that educational opportunities are accessible from the start to a diverse range of students\cite{walsh2022aspiring,stephenson2018retention}, not just those already in the computer science pipeline.
+Additionally, evidence-based best practices in broadening participation in computing have shown that such opportunities need to be contextualized in light of real-world change \cite{barker2017changing}, employability \cite{cossa2021motivation}and achievability through role models and networking \cite{blaney2024sounds} to ensure that underrepresented groups see a stable path forward.
+
+\subsection{Existing collaborations}
+Previously funded collaborations by PI Napolitano, CoPI Reinhart, CoPI Wang, CoPI Moreu, CoPI Paal, and CoPI Solnosky aimed to develop a curricular framework for data science education that was grounded in community-centered data that could be integrated into existing highschool, undergraduate (UG), and graduate STEM programs.
+The key components included creating engineering-contextualized data science curricula and engaging community stakeholders, industry partners, and student organizations to provide real-world problems and flexible learning pathways.
+While the previous project made strides in developing a curricular framework for integrating community-centered data science education into engineering classes, and increasing exposure to informal learning opportunities like student clubs, there remain crucial gaps that the current ``transformation" track proposal seeks to fill. 
+
+Specifically in the previous work, the focus was solely on creating community-centered datasets and data science content, without intentional consideration of evidence-based pedagogy or strategies to broaden participation in computing through inclusive teaching practices. 
+Dedicated diversity and inclusion consultants and assessors were not involved in facilitating intentional pedagogical choices.
+Additionally, the developed curriculum focused primarily on positioning engineering students as \textbf{users} of data science techniques, lacking emphasis on developing them as \textbf{creators} who can build tailored data science models and applications, or as \textbf{problematizers} who critically examine the implications and limitations of data-driven systems.
+Lastly, the scope of the previous work did not extend to creating structured pathways to guide students in translating their data science skills into career opportunities aligned with their interests.
+The current ``transformation" track proposal seeks to address these gaps by fostering inclusive learning environments, providing comprehensive career pathway support, and equipping students to be effective users, creators, and problematizers of AI within engineering contexts.
+
+\subsection{Current gaps and limitations}
+
+Building upon these gaps and the lessons learned from previous collaboration among the PI and CoPIs and evidence-based practice for broadening participation in computing discussed above\cite{walsh2022aspiring,stephenson2018retention, barker2017changing, cossa2021motivation, blaney2024sounds}, this proposal aims to broaden participation and promote equitable access to cutting-edge AI learning opportunities for underrepresented students in EM disciplines by:
+
+\begin{gitemize3}
+\item Developing contextualized AI educational resources (lectures, assignments, datasets) that are tailored to specific engineering domains and designed to be inclusive. These resources will be created in collaboration with faculty members from diverse backgrounds, assistance from PSU's \hl{DDAR DEI} program, and with input from student representatives from underrepresented groups to ensure that they meet the needs and interests of a wide range of learners. This is discussed in more detail in Section 4 "Research plan."
+\end{gitemize3}
+
+
+\begin{gitemize4}
+\item Providing career guidance and support that connects underrepresented students with tailored career advice and networking opportunities for EMxAI. 
+This will include evidence-based practices for promoting inclusion in STEm such as organizing seminars and info sessions that highlight diverse professionals in AI and computing \cite{sunasee2023incorporating}, putting together written resources and tipsheets, as well as establishing research opportunities specifically targeted at underrepresented undergraduate students \cite{sunasee2023incorporating}. 
+\end{gitemize4}
+
+
+By implementing these strategies, the proposed project aims to create an inclusive EMxAI education ecosystem that supports the success and advancement of underrepresented students in engineering disciplines. 
+This approach recognizes the unique challenges and barriers faced by these students and seeks to provide them with the resources, support, and opportunities needed to thrive at the intersection of EM with AI and computing fields. Ultimately, by broadening participation and promoting equitable access to AI education, this project has the potential to contribute to a more diverse and inclusive workforce in AI and computing, driving innovation and social responsibility.
+
+
+
+\section{Research plan:} The work is comprised of four tasks.
+Task 1 directly addresses RQ 1; Task 2 develops the material necessary to examine RQ 2 in Task 3; Task 4 ensures that the material is sustainable past the grant tenure.
+
+\begin{tcolorbox}[colback=mycmykcolor, colframe=black, boxrule=1pt, coltext=black]
+\textbf{Task 1: Knowledge Base Development:} This task will focus on investigating best practices for EMxAI, while ensuring inclusivity and alignment with program requirements. In doing so, we will address RQ group 1, which investigates the essential AI concepts, learning needs, and integration strategies for developing inclusive and ABET-aligned AI curricula in undergraduate EM programs.
+\end{tcolorbox}
+
+Task 1 starts by initiating the five-year investigative process of \textbf{RQ 1.1: What are the essential AI concepts and skills for the EM discipline as perceived by faculty, students, and industry professionals?} and \textbf{RQ 1.2: What AI learning needs, interests, and accessibility barriers do students from various demographics experience in EM programs?}
+To address these questions, a branching Survey 1 (S1) will be conducted with engineering faculty, students, and industry professionals before each semester's course content is taught. 
+The first year of this project will be dedicated to developing the framework needed for this survey to be successful based on \cite{cossa2021seven}.
+The faculty branch will seek to identify core AI topics/skills needed in their specific engineering subdiscipline and ideas for contextualizing them effectively in the curriculum. Questions will be based on the Educause Faculty Survey, which currently includes questions about the importance of data literacy skills and could be adapted to focus on \hl{AI skills} \cite{xxx}.
+The student branch will gather data on AI learning needs, interests, and accessibility barriers from the student perspective across different demographics based on \cite{Hart-Research-Youth-AI-Survey-Results42}. 
+The industry professional branch will convey the AI competencies most valued in their future engineering workforce based on \cite{PwC-AI-Study} as well as questions from the ``Job market and workforce impacts" section of the Stanford University AI+Education Summit \cite{AIEducationSummit2024}.  
+Focus groups (FG1) with diverse engineering students will further explore their learning needs, preferences, and challenges related to AI education, based on questions from the Stanford University AI+Education Summit \cite{AIEducationSummit2024}.
+Qualitative data will undergo thematic analysis to identify common themes and patterns based on \cite{walker2024mixed}, while quantitative data will be summarized using descriptive statistics based on \cite{walker2024mixed}. 
+The synthesis will yield a comprehensive list of key AI concepts and skills for EMxAI, as well as guidelines and recommendations for making materials accessible and engaging for diverse students. 
+This evidence will directly inform the development of EmxAI educational resources and inclusive pedagogical strategies that can effectively address and overcome the identified challenges. 
+The findings will also guide efforts to create more welcoming and supportive learning environments that foster engagement and success for all students, regardless of their demographic backgrounds. Results will be iteratively reviewed by \hl{DDAR DEI} to ensure inclusivity is central to all resource development.
+These findings will be shared by PI Napolitano at the annual Education Committee meeting at the EMI annual conference for feedback and evaluation, then summarized into an initial roadmap for broadening participation in EMxAI.
+While these will be drafted in the first year of the project, these will only be a baseline to iterate from. Each year, these guidelines will be revisited considering new S1/FG1 data as well as S2/FG2 data described in Task 3. 
+
+Additionally in Task 1 we will consider \textbf{RQ 1.3: What are the key considerations and strategies for integrating AI curricula into undergraduate engineering programs while maintaining alignment with ABET requirements and promoting inclusivity and equity?} 
+A curriculum mapping and alignment exercise will be conducted across multiple institutions represented in this grant, gathering course descriptions, learning outcomes, syllabi, and other materials from a diverse range of undergraduate engineering programs as well as existing AI and computing courses offered. 
+Additional materials will be solicited from the EMI Education Committee which PI Napolitano is part of.
+The identified AI concepts and skills will be mapped against the ABET student learning outcomes and program criteria, leveraging the expertise of Co-PI Solnosky as the ABET coordinator for Architectural Engineering at Penn State. 
+Curriculum alignment analyses, drawing upon established methods such as the Surveys of Enacted Curriculum (SEC) model \cite{blank2005surveys}, will identify gaps, redundancies, and opportunities for coherent integration of AI topics within existing engineering curricula frameworks. 
+Open-ended question data will also be collected from engineering faculty across institutions in S1 to gain insights into the perceived barriers, challenges, and successful strategies for implementing AI-integrated curricula while continuing to meet ABET accreditation standards. 
+The synthesis of the curriculum mapping, alignment analyses, and qualitative faculty input will be triangulated to develop evidence-based guidelines and recommendations. 
+These will provide concrete guidance on integrating AI competencies across courses and disciplines while satisfying ABET criteria through contextualized, applied AI learning experiences. 
+The guidelines will emphasize the adoption of inclusive instructional design principles such as cultural responsiveness as guided by PSU's \hl{DDAR DEI} program.
+The outcomes will enable engineering programs to fuse AI education with existing frameworks in an equitable, evidence-based manner.
+
+\begin{tcolorbox}[colback=mycmykcolor, colframe=black, boxrule=1pt, coltext=black]
+\textbf{Task 2: EMxAI ecosystem:} This task will focus on developing an EMxAI ecosystem that makes educational content relevant, engaging, and applicable for a diverse range of students.
+\end{tcolorbox}
+
+To achieve this, as described in Task 1, the project team will collaborate with faculty members and subject matter experts from the targeted engineering domains to identify the key AI topics, skills, and applications that are most relevant to each field. 
+Based on the input gathered in S1, the team will design and develop lecture materials, assessments, and case studies projects which address how students can use, create, and problematize AI in this EM domain; these materials will be closely aligned with the learning objectives of ABET as informed by CoPI Solnosky. 
+These materials will be created in Jupyter notebooks in accordance with best practices laid out in the Teaching and Learning with Jupyter handbook produced by some of the leading scholars in broadening participation in computing \cite{barba2019teaching}.
+Additionally, we will provide sample ABET forms for different relevant performance indicators for each course module developed, as well as meta documents that explain our rationale for how we came up with these. 
+These lessons will be designed to be modular, allowing instructors to easily integrate them into existing courses or use them as standalone modules, and each will directly address the use, creation, and problematizing of AI.
+These modules will be evaluated and assessed by PSU's \hl{DDAR DEI} program to ensure that they meet the best practices outlined in Task 1. 
+Additionally, each EMxAI module developed will be paired with a lecture and online networking event from an underrepresented speaker in EMxAI. The seminars will be structured so that the presenter has time to talk about their path that led them to where they are, challenges they faced, and advice they have for students. Following this, there will be question and answer time for the students. After question and answer time, there will be dedicated slots that students can sign up for so they can talk 1:1 with the speaker about additional or personal questions they have.
+Each seminar and networking event will culminate in a “profile” sheet about a
+potential type of EMxAI job that students could aspire to. 
+
+\begin{figure}[h]
+\centering
+  \includegraphics[width=\textwidth]{images/1_EM.png}
+  \captionsetup{justification=centering, singlelinecheck=false, font=small}
+  \caption{\textit{Illustration of key AI topics from Task 1 being contextualized and outcomes.}}
+  \label{fig:1EM}
+\end{figure}
+
+For example, a EMxAI lesson could be based on PI Napolitano's work with structural recovery of historic structures after tornadoes.  
+Students could begin by \textbf{using pre-trained AI} models such as xxx\hl{xxxWESxxx} to analyze field data gathered by PI Napolitano\cite{pointCloudsDone} and predict the impact of different recovery strategies on damaged historic buildings.
+To foster skills in \textbf{creating AI} applications, students can train custom \hl{xxxWESxxx} models to improve model accuracy by including unique architectural features and materials. 
+Additionally, the lesson will emphasize the \textbf{problematization of AI} by critically examining potential limitations and biases in the models used. For example, students will assess whether the training data adequately represents diverse building styles and eras, which could lead to biased predictions.
+A potential seminar and networking speaker could include someone from the Federal Emergency Management Agency (FEMA) who has worked with PI Napolitano on prior projects. They could speak about the broader implications of using AI for post-disaster triage, exploring issues such as algorithmic bias, prioritization, and potential negative impacts on marginalized communities. 
+This talk could be followed by a Q\&A session so that students are able to directly engage with someone in the EMxAI field. 
+The seminar's career profile sheet would then feature core skills and professional development opportunities that the speaker thinks are needed for their position as well as questions students can ask in potential interviews for such positions.
+Case studies, like analyzing the Mayfield Historic District in Kentucky after the 2021 tornado using AI damage detection models, will allow students to identify strengths, limitations, and propose improvements specific to historic structures \cite{our work}.
+These curricular resources will be iteratively evaluated by \hl{DDAR DEI} to ensure inclusivity.
+As a follow-up research experience for undergraduates (REU), students could pursue summer research projects mentored by PI Napolitano. Potential projects could involve developing novel AI algorithms for damage detection tailored to specific architectural styles or materials common in historic structures. Students could investigate techniques for mitigating bias in AI systems used for post-disaster recovery efforts. 
+
+
+
+
+% \begin{table}[h]
+% \footnotesize
+% \centering
+% \begin{tabular}{|p{2.5cm}|p{1cm}|p{1cm}|p{2cm}|}
+% \rowcolor{mycmykcolor}
+% \hline
+% \small
+% \textbf{Component} & \textbf{Use} & \textbf{Create} & \textbf{Problematize} \\
+% \hline
+% Case study &  &  & \\
+% \hline
+% Seminar speaker &  &  & \\
+% \hline
+% REU &  &  & \\
+% \hline
+% \end{tabular}
+% \label{tab:edu}
+% \end{table}
+% \normalsize
+
+\begin{table}[h!]
+\footnotesize
+\centering
+\caption{Structure for ensuring AI use, creation, and problematizing are addressed across lessons, projects, and seminar speakers.}
+\begin{tabular}{|p{2cm}|p{4cm}|p{4cm}|p{4cm}|}
+\rowcolor{mycmykcolor}
+\hline
+\small
+\textbf{Component} & \textbf{Use} & \textbf{Create} & \textbf{Problematize} \\
+\hline
+Hands-on case study project & Analyze real-world data using pre-trained \hl{xxxWESxxx} models for damage prediction on historic structures & Train custom \hl{xxxWESxxx} models to improve model accuracy by incorporating unique architectural features and materials & Identify potential biases or limitations in AI models (e.g., lack of diverse training data for different building styles/eras) \\
+\hline
+Seminar Speaker & - & Talk about an AI-driven decision support tool that was created to recommend optimal recovery approaches based on user inputs (extent of damage, budget, preservation requirements) & Expert from FEMA discusses the implications of using AI for post-disaster triage (algorithmic bias, prioritization, impacts on marginalized communities) \\
+\hline
+REU & Apply pre-trained AI models for damage assessment on historic structures using real-world data & Develop novel AI algorithms for damage detection tailored to specific architectural styles or materials & Investigate techniques for mitigating bias in AI systems used for post-disaster recovery efforts \\
+\hline
+\end{tabular}
+\label{tab:edu}
+\end{table}
+\normalsize
+
+These hands-on research experiences would complement the classroom learning and provide undergraduates with valuable skills in applying AI within the context of EM and historic preservation.
+Breaking this example lesson down, Table~\ref{tab:edu} shows the general structure of this lesson which could be applied to other EM subdomains represented by the CoPIs. 
+This is one example from PI Napolitano's subdomain. Based on the key AI concepts outlined in Task 1, each institution will create their own EMxAI curricular materials and pathways in this template format. 
+The proposed project will create a centralized platform to facilitate the sharing and dissemination of these AI educational materials across institutions. This platform will serve as a hub for educators to access, contribute to, and collaborate on AI resources for engineering education.
+Specifically, we will leverage the Creative-Commons-licensed, open-source model of the Journal of Open Source Education (JOSE) which PI Napolitano has utilized before~\cite{napolitano2024JOSE}.
+In this model, the curricula are published open-source on Github, with source codes for lectures and projects and a peer-reviewed explanatory article.
+By adhering to standard formatting, it will be straightforward to integrate educational materials from different courses or institutions.
+Additionally, with the help of the speakers, PSU Career Services, and \hl{DDAR DEI}, we will develop a culminating hybrid workshop and associated tip sheet for students learning to talk about their AI skills in EM job interviews. These resources will be made available through the EMxAI infrastructure developed.
+
+\begin{figure}[h]
+\centering
+  \includegraphics[width=\textwidth]{images/all_EM.png}
+  \captionsetup{justification=centering, singlelinecheck=false, font=small}
+  \caption{\textit{Illustration of all key AI topics from Task 1 being contextualized and final outcomes across all EMxAI generated.}}
+  \label{fig:all}
+\end{figure}
+
+The project will also leverage the resources and capabilities provided by the National Artificial Intelligence Research Resource (NAIRR) Pilot to support the development and deployment of AI educational resources.
+The NAIRR Pilot aims to increase access to AI-related infrastructure, including computational resources, AI-ready datasets, pre-trained models, and software systems.
+By tapping into these resources, the project can ensure that the educational materials are built upon state-of-the-art AI technologies and can be easily integrated into the NAIRR ecosystem.
+We plan to utilize these computational resources to develop new models and run pre-trained models for classroom learning.
+Conversely, we plan to contribute educational materials developed in this project back to the NAIRR ecosystem.
+
+
+\begin{tcolorbox}[colback=mycmykcolor, colframe=black, boxrule=1pt, coltext=black]
+\textbf{Task 3: Conduct research on the effectiveness of the developed resources and approaches:} This task will focus on evaluating the impacts of the EMxAI educational resources and supporting infrastructure developed in Tasks 1 and 2. In doing so, we will address RQ group 2, which seeks to evaluate the efficacy of our implementation in terms of student learning outcomes, broadening participation, and career readiness for underrepresented groups.
+\end{tcolorbox}
+
+Task 3 will begin by asking \textbf{RQ 2.1: To what extent do the contextualized AI educational resources and project-based learning experiences enhance the learning outcomes and AI competencies of diverse undergraduate students in EM disciplines?} 
+Survey 2 (S2) will have an initial set of common questions for students and faculty, with branching follow-up questions tailored to their roles. 
+The student branch will be used to gauge student attitudes and perspectives on how well the contextualized resources facilitated their learning of AI concepts and applications relevant to EM based on a Likert-scale survey on confidence, information, and knowledge based on questions developed for the Evaluation Report of the New England Undergraduate Computing Symposium (NEUCS) \cite{Cossa2010}.
+Focus groups with students (FG2) will offer qualitative depth, allowing students, especially those from underrepresented groups, to share first-hand experiences and reflections on how the inclusive, domain-specific integration of AI education impacted their learning journey within the EM curriculum based on \cite{Cossa2010}.
+The investigation will generate evidence-based understanding of the extent to which the contextualized AI resources and pedagogical approaches fostered equitable, engaging learning experiences that enhanced AI competencies for diverse students across EM disciplines. 
+Additionally student performance data such as test scores and project evaluations will be included in this analysis. 
+Demographic data collected in S2 will enable analysis of outcomes across different student subgroups. 
+Data analysis methods will include hierarchical linear modeling to account for nested data structures and identify factors influencing student learning outcomes based on \cite{woltman2012introduction, raudenbush2002hierarchical,ma2000hierarchical}. 
+Differential item functioning analysis will be used to assess the fairness and validity of the assessments for diverse student populations based on \cite{martinkova2017checking,osterlind2009differential,adams2020blended}. 
+The synthesis will provide evidence on the effectiveness of the developed resources, recommendations for refinement, and insights into how contextualized AI education can promote learning and engagement for all students in EM programs.
+
+Subsequently we will address \textbf{RQ 2.2: How does the implementation of the EMxAI education ecosystem, including the online platform and communities of practice, contribute to broadening participation, promoting equitable access, and fostering engagement and a sense of belonging in AI education within engineering programs, particularly at MSIs?} 
+To investigate this research question, data will be gathered on the usage, adoption, and impact of the educational infrastructure and collaborative components developed for sharing EMxAI resources across institutions. 
+Through the faculty branch of S2, information will be collected on aspects such as the number of resources shared, frequency of user interactions, diversity of participating institutions, and factors influencing resource sharing and cross-institutional collaboration based on existing user interfaces questions studied in \cite{stetson2004comparison}. 
+The investigation will examine both technical factors, like user interface design, functionality, and accessibility of the online platform, as well as social and collaborative aspects, including communication tools, communities of practice, and mechanisms for cross-institutional engagement facilitated by the infrastructure. 
+Qualitative input from CoPIs at MSIs will provide insights into how the ecosystem contributed to broadening participation, equitable access, engagement, and a sense of belonging for underrepresented students in AI education within engineering programs. 
+The synthesis will identify key indicators of success, challenges faced, and recommendations for enhancing the educational infrastructure's ability to foster inclusive, collaborative AI education ecosystems that effectively reach and support students from diverse backgrounds, particularly those at MSIs.
+
+Lastly we will examine \textbf{RQ 2.3: What is the impact of the targeted career guidance, support, and research opportunities on the career readiness and self-efficacy of underrepresented students within the EMxAI discipline?} 
+This research question will focus on evaluating the effectiveness of the project's efforts to provide career guidance, support, and research opportunities tailored for underrepresented students interested in pursuing EMxAI careers. 
+Data will be collected through S2 and FG2 based on existing surveys such as \cite{desing2024identifying} and collaboration with PSU Career Services to assess the impact of activities such as seminars and networking events featuring diverse professionals in AI and computing, subdomain-tailored career advice, and REUs for underrepresented students in EMxAI. 
+Student participants will provide feedback on how these targeted initiatives influenced their career readiness, self-efficacy, awareness of AI career pathways in EM, and overall interest and motivation to pursue further education or employment opportunities at the intersection of AI and EM. 
+The analysis will identify successful strategies, areas for improvement, and best practices for designing and implementing intentional career development and research programs that empower underrepresented students to translate their EMxAI competencies into fulfilling and impactful careers. 
+The synthesis will generate recommendations for creating inclusive and supportive ecosystems that facilitate the transition of a diverse talent pool from EM education into the AI workforce, ultimately contributing to a more equitable and representative landscape within these fields. All materials will be iteratively assessed by \hl{DDAR DEI} and the EMI Educational Committee which PI Napolitano is part of; these assessments can be seen in the timeline in Figure \hl{xxx}.
+
+\begin{tcolorbox}[colback=mycmykcolor, colframe=black, boxrule=1pt, coltext=black]
+\textbf{Task 4: Dissemination and Sustainability Planning:} This task will focus on developing strategies for dissemination of project outcomes, resources, and best practices, while ensuring the long-term sustainability and scalability of inclusive AI education initiatives beyond the funding period.
+\end{tcolorbox}
+
+A dissemination plan will be formulated at the project's outset to share the project's outcomes, resources, and best practices with the broader communities. 
+This will involve actively presenting findings at relevant conferences and workshops, such as the American Society for Engineering Education (ASEE) Annual Conference and Engineering Mechanics Institute (EMI).
+The project team will also pursue publication opportunities in the Journal of Engineering Education, Journal of Open Source Education, Advances in Engineering Education, and discipline-specific journals such as the Journal of Civil Engineering Education. 
+These publications will serve as channels to disseminate the project's research findings, novel pedagogical approaches, and evidence-based recommendations for inclusive AI education in engineering curricula.
+In addition to traditional academic dissemination channels, the team will leverage virtual communities and online platforms to facilitate broader reach and engagement. This will include creating a dedicated repository to host and share the developed educational resources, instructional materials, and best practice guidelines. 
+
+To ensure the long-term sustainability and accessibility of the project's outputs, all developed materials, including curricula, tip sheets, workshops from career services, seminar talks will be released under Creative Commons licensing. 
+This open licensing approach will enable widespread adoption, adaptation, and reuse of the materials by educators and institutions worldwide. 
+Similarly, any computer code or software developed as part of the project will be shared under open-source licenses to facilitate further development and contributions from the broader community.
+We will invite underrepresented graduates from the partner institutions who participated in this project and chose AI-related career paths to give future seminars; this will help encourage student engagement and promote long-term sustainability by strengthening existing networks in lieu of always creating new ones.
+Furthermore, the project team will develop a comprehensive sustainability plan to ensure the continued impact and scalability of the project's efforts beyond the funding period. 
+This plan will involve exploring partnerships and collaborations with industry partners, professional organizations, and other stakeholders invested in promoting inclusive AI education and workforce development.
+Potential partners may include technology companies with a strong presence in AI and engineering applications, professional societies such as the American Society of Mechanical Engineers, the Institute of Electrical and Electronics Engineers, and organizations focused on broadening participation in computing and STEM fields such as the Society of Women Engineers. These partnerships could involve joint funding opportunities, industry-sponsored research projects, internship programs, and collaborative initiatives to sustain and expand the reach of the project's initiatives.
+The sustainability plan will also explore strategies for institutionalizing the project's outcomes within the participating universities and promoting the adoption of the developed resources and practices across other institutions. 
+By implementing a dissemination and sustainability plan, the project aims to maximize its impact and contribute to transformative changes in undergraduate engineering education. 
+The widespread dissemination of resources, best practices, and research findings will foster a collaborative ecosystem, empowering educators and institutions to integrate inclusive and contextualized AI learning experiences into their curricula. 
+Simultaneously, the sustainability efforts will ensure the longevity and scalability of the project's initiatives, paving the way for a more diverse, equitable, and representative workforce in AI and computing fields.
+
+
+\section{Project management:}
+PI will be responsible for overall management of project execution.  PI will work with the project CoPIs to oversee project progress and performance and ensure that reporting requirements are completed.  The project will implement a scaled Earned Value Management plan. On an annual basis, an accounting of earned value to date and related standard performance metrics will be completed by PI and reported. The financial aspects of the project will be managed through Penn State’s System for Integrated Management, Budgeting, and Accounting (SIMBA). 
+
+
+\subsection{Collaboration plan}
+The proposed project is a collaboration among PSU, TAMU, TSU, and UNM. PI Napolitano (PSU) will lead the overall project management, while CoPIs Paal (TAMU), Reinhart (PSU), Wang (TSU), and Moreu (UNM) will focus on developing EMxAI resources specific to their EM domains and integrating them into relevant courses at their institutions. CoPI Solnosky (PSU) will conduct an internal evaluation to ensure alignment with ABET requirements.
+The resumes of each partner highlight in detail the prior accomplishments in both the education and research realms which will provide a strong foundation for this project. 
+The common goals of the collaboration include developing inclusive and contextualized EMxAI educational resources, creating an educational infrastructure for sharing these resources across institutions, fostering diverse communities of practice, and establishing supportive career pathways for underrepresented engineering students interested in the intersection of AI and EM. 
+The success of the collaboration will be assessed considering the EMxAI resources developed, student learning outcomes measured in S2 and participation of underrepresented students as measured in S2.
+Regular communication and convenings of project members will be facilitated through quarterly hyrbid meetings to assess progress. 
+The success of the collaboration will be assessed through the PSU \hl{DDAR DEI} program, the EMI Education Committee, and PSU Career Services.
+The budget line items supporting collaboration and coordination include travel funds for in-person meetings and stipends for the DEI evaluator.
+PSU Career Services requested no budget as the content was deemed to be within their existing role.
+
+\subsection{Risk analysis and mitigation strategies}
+One significant risk is the lack of motivation among non-computer science students, who may perceive AI content as irrelevant to their engineering disciplines. 
+To mitigate this, the project team will develop contextualized AI educational resources that demonstrate the direct relevance and applicability of AI within specific EM domains and engage industry partners to provide real-world examples and case studies. 
+Another risk is the difficulty in integrating AI content into existing curricula while maintaining ABET compliance. 
+The team will collaborate closely with CoPI Solnosky, the ABET coordinator, to ensure alignment with ABET requirements and provide sample ABET documentation for course materials and assessments.
+Limited participation from underrepresented groups is another risk, as these students may be hesitant to engage with AI content due to lack of exposure, confidence, or perceived barriers. 
+The project has partnered with MSI from the outset as wellas will partner with the PSU \hl{DDAR DEI} program to develop inclusive pedagogical strategies and offer targeted outreach, mentoring, and support programs. 
+Technical challenges with the online platform for sharing EMxAI resources across institutions may arise, which will be mitigated through testing and user training.
+Sustainability and long-term adoption of the developed EMxAI resources beyond the grant period may be challenging. 
+To address this, the team will develop a sustainability plan that includes strategies for securing additional funding, partnerships, and institutional support, and engage with professional organizations to promote dissemination and adoption. 
+Collaboration and communication challenges across multiple institutions and disciplines will be mitigated by establishing clear communication protocols, regular check-ins, and using project management tools.
+Lastly, the evaluation plan may have limitations in capturing the project's impact or providing actionable insights. 
+To mitigate this,
+CoPI Solnosky will provide evaluation regarding ABET, the EMI Education Committee which PI Napolitano is part of will provide subject matter expert evaluation, and the team will engage a \hl{DDAR DEI} evaluator with expertise in equitable engineering education and regularly review and adjust the evaluation plan based on feedback and findings. 
+
+% The References Cited section would normally begin a new page:
+\newpage
+
+\bibliography{biblio.bib} 
+
+\end{document}

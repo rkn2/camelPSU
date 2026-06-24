@@ -1,0 +1,81 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{nopageno} 
+
+% NSF-standard run-in bold headers
+\titleformat{\section}[runin]{\normalfont\bfseries}{\thesection}{1em}{}[]
+\titlespacing*{\section}{0pt}{0.6\baselineskip}{1ex}
+
+\setlist[itemize]{leftmargin=1.5em, labelsep=0.25em}
+
+\begin{document}
+
+\noindent \textbf{Collaboration and Management Plan}
+
+\section*{1. Research Team and Specific Roles}
+The Phase I CAMEL-CN team is structured to ensure that dataset generation is informed by cutting-edge engineering research and pedagogical reality.
+
+\begin{itemize}[noitemsep, topsep=2pt]
+    \item \textbf{Rebecca Napolitano (PI, Lead Data Scientist):} Responsible for the fiscal and administration of the network. She oversees the Data Translation framework, managing the technical conversion of data into educator-ready Python frameworks. She leads the design of AI-ready annotation protocols that ensure the resulting dataset is optimized for AI applications.
+    \item \textbf{Xiangquan Yao (Co-PI, Science of Learning Lead):} Directs the research program, applying cognitive science theories to the design of data collection protocols. He is responsible for establishing annotation reliability metrics and oversees the integration of multimodal learning analytics that connect process-level interaction logs with student artifacts.
+    \item \textbf{Wesley Reinhart (Co-PI, Data Originator):} Provides industrial datasets from the 2D Crystal Consortium national user facility and NSF NRT. He manages the Composable Courseware, ensuring that all products adhere to FAIR principles for long-term reusability.
+    \item \textbf{Wangda Zuo (Co-PI, Data Originator):} Provides datasets and context from NSF-funded cyber-physical research on building energy systems. 
+    \item \textbf{Kathleen Hill (Practitioner Implementation Lead):} Director of the Center for Science and the Schools (CSATS). She leads K-12 partnerships and ensures that all modeling tasks align with Pennsylvania Core Standards for Mathematics. She manages the administrative relationship with committed rural school districts.
+    \item \textbf{Amber Cesare (CSATS Curriculum Integration Specialist):} With expertise in mathematical and scientific modeling, she acts as the primary field liaison to bridge engineering datasets with classroom tasks. She ensures that the ``complexity dials" are tuned to maintain authentic reasoning while providing the necessary scaffolding to prevent cognitive overload.
+    \item \textbf{[To Be Hired] (CSATS Computational Education Specialist):} Focuses on instructional support during implementation to ensure that telemetry hooks and student-led data logging are functioning correctly, providing a layer of field-level quality control.
+    \item \textbf{Jeff Remington (CSATS Outreach Liaison):} Serves as the point of contact for school administrators and participating educators. He coordinates recruitment efforts and maintains the communication infrastructure connecting the research team with isolated rural school districts.
+    \item \textbf{Participating Rural Math Teachers (Co-Researchers):} High school educators from committing districts who act as co-researchers by collecting classroom evidence, providing expert-coded annotations on student reasoning patterns, and participating in iterative PDSA cycles.
+    \item \textbf{Robert Mayne (Practitioner Development Adviser):} Oversees curriculum development and the design of teacher professional development (PD) modules.
+\end{itemize}
+
+\section*{2. Coordination and Integration Mechanisms}
+To ensure sustained collaboration and the effective co-production of knowledge, the network utilizes four primary coordination mechanisms:
+
+\begin{itemize}[noitemsep, topsep=2pt]
+    \item \textbf{Summer Institutes:} One-week intensive workshops at Penn State where practitioners work alongside faculty to engage in the end-to-end modeling cycle using raw industrial data.
+    \item \textbf{Networked Evaluation and Improvement Community (NEIC):} A monthly virtual forum facilitated by Jeff Remington to connect rural educators with the research faculty to share implementation experiences, evaluate progress, and examine emergent patterns in student work.
+    \item \textbf{Internal Staging Environment:} A secure, shared digital workspace on PSU servers where researchers can review telemetry before release to ensure technical and pedagogical accuracy.
+    \item \textbf{Plan-Do-Study-Act (PDSA) Cycles:} Practitioners implement modeling tasks (Plan/Do), researchers analyze the resulting telemetry (Study), and the entire network meets to refine the complexity dials of the curriculum based on student performance evidence (Act).
+\end{itemize}
+
+\section*{3. Project Management Structure and Timeline}
+The project is managed through four Task Forces (TF): \textbf{TF1 (Outreach and PD)} led by Hill; \textbf{TF2 (Data Generation)} led by Yao; \textbf{TF3 (Infrastructure)} led by Napolitano; and \textbf{TF4 (Sustainability)} led by Napolitano and Yao.
+
+\begin{table}[h!]
+\small
+\centering
+\begin{tabularx}{\textwidth}{@{}l XXX@{}}
+\toprule
+\textbf{Phase} & \textbf{Year 1 (Setup \& Pilot)} & \textbf{Year 2 (Scaling \& Framework)} & \textbf{Year 3 (Validation \& Exit)} \\ \midrule
+\textbf{TF1} & Onboard 7 rural districts; 1st Summer Institute. & 2nd Summer Institute; Mentoring of new cohort. & Refinement of complexity dials; Final PD modules. \\ \addlinespace
+\textbf{TF2} & Pilot collection (100 students); Telemetry testing. & Full collection (2,000 students); Continuous annotation. & Final collection (2,400 students); Metadata completion. \\ \addlinespace
+\textbf{TF3} & CC Architecture prototyped; Initial xAPI alignment. & Data Translation Framework documented. & Classifier training (Struggle Prediction); Validation. \\ \addlinespace
+\textbf{TF4} & Internal staging env. live; Ideas Lab participation. & Conference presentations (PME); Data-a-thons. & Publication on ICPSR; Phase II Proposal preparation. \\ \bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{4. Decision-Making and Conflict Resolution}
+While the project follows the principle of co-design of research and co-production of knowledge, we also recognize the need for executive authority in certain circumstances.
+Technical decisions (data standards) are finalized by PI Napolitano and Co-PI Reinhart.
+Pedagogical decisions (scaffolding and complexity levels) are finalized by Hill and Mayne. 
+Disciplinary conflicts are resolved through a consensus model during monthly NEIC meetings, ensuring that the domain expertise of data originators is balanced with the cognitive frameworks of the learning scientists.
+
+\section*{5. Risk Mitigation and Quality Control}
+\begin{itemize}[noitemsep, topsep=2pt]
+    \item \textbf{PII Leakage:} Automated scrubbing is followed by manual inspection of 10\% of all data by the Lead Data Scientist before any release.
+    \item \textbf{Annotation Drift:} Monthly calibration sessions for raters and double-coding of 20\% of all artifacts will be conducted to maintain high inter-rater reliability.
+    \item \textbf{Teacher Attrition:} Jeff Remington maintains a waitlist of interested educators through CSATS to ensure recruitment targets are met.
+\end{itemize}
+
+\section*{6. Coordination with Phase II National Infrastructure}
+The network will maintain an active liaison with the Phase II National Coordinator. PI Napolitano and Co-PI Yao will represent the network in CAMEL cross-network activities, contributing to the design of the Phase II collaboratory and ensuring dataset alignment with national tracking standards.
+
+\textbf{7. Project Evaluation and Success Metrics} 
+The network will employ a continuous evaluation strategy to monitor both operational success and research quality. Operational success will be measured by recruitment targets (4,500 students), teacher retention rates in the NEIC ($>80\%$), and the timely publication of datasets on FAIR-aligned repositories.
+Dataset quality will be evaluated through Inter-Rater Reliability (IRR) scores for annotations (Target $\kappa \geq 0.70$) and the successful training of the "Struggle Prediction" classifier with a minimum accuracy threshold defined in Year 3. Pedagogical impact will be evaluated via pre/post-assessment gains in student modeling competencies, cross-referenced with teacher fidelity logs to ensure the ``complexity dials" functioned as intended.
+
+\end{document}

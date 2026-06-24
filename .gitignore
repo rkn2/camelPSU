@@ -1,0 +1,6 @@
+.DS_Store
+.dual-graph/
+__pycache__/
+*.pyc
+.env
+*.log

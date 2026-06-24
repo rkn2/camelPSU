@@ -1,0 +1,228 @@
+{
+  "grant": {
+    "award_number": "2621173",
+    "proposal_number": "128594",
+    "title": "Phase I CAMEL-CN: Modeling the Messy: Capturing Student Reasoning within High-Dimensional Industrial AI Datasets",
+    "nsf_program": "NSF 26-501 — CAMEL: Collaboratory to Advance Mathematics Education and Learning for K-12",
+    "pathway": "Novel Dataset Pathway (1a)",
+    "division": "BCS — Social, Behavioral, and Economic Sciences",
+    "award_date": "2026-06-22",
+    "nsf_period_start": "2026-07-01",
+    "nsf_period_end": "2029-06-30",
+    "budget_year1_start": "2027-01-01",
+    "budget_year1_end": "2027-12-31",
+    "budget_year2_start": "2028-01-01",
+    "budget_year2_end": "2028-12-31",
+    "budget_year3_start": "2029-01-01",
+    "budget_year3_end": "2029-12-31",
+    "fa_rate_pct": 57.30,
+    "budget_total": 1508507,
+    "budget_year1": 460769,
+    "budget_year2": 534120,
+    "budget_year3": 513618,
+    "pi": "Rebecca Napolitano",
+    "pi_email": "nap@psu.edu",
+    "institution": "Penn State",
+    "nsf_po": "Elizabeth F. Chua",
+    "nsf_po_email": "echua@nsf.gov",
+    "nsf_grants_official": "Tyffani N. Smith",
+    "nsf_grants_official_email": "tnsmith@nsf.gov",
+    "target_students": 4500,
+    "target_teachers_year1": 4,
+    "target_teachers_year2": 12,
+    "target_teachers_year3": 12
+  },
+  "budget": {
+    "total_awarded": 1508507,
+    "spent_to_date": 0,
+    "current_year": 0,
+    "burn_rate_note": "Pre-work period (Jul–Dec 2026): no charges to budget. Budget Year 1 starts 01/01/2027.",
+    "ios": {
+      "psc": "Participant Support Costs — segregated per NSF requirement",
+      "ae_engineering": "Engineering IO — Becca runs; salaries (Napolitano, Reinhart, Zuo, grads, UG); travel (all team); consulting; tuition (1 student)",
+      "education": "Education IO — Kathy runs; salaries (Yao, Hill, Cesare, Remington, TBD specialist); CSATS costs; tuition (1 student)"
+    },
+    "last_updated": "2026-06-24"
+  },
+  "irb": {
+    "status": "not_submitted",
+    "blocker": true,
+    "note": "No human subjects work (recruitment, data collection) until IRB approved. Protocol not yet fully developed."
+  },
+  "deliverables": [
+    {
+      "id": "D1",
+      "title": "Python Notebook Telemetry Framework",
+      "due": "2027-12-31",
+      "owner": "Napolitano",
+      "type": "software",
+      "status": "pending",
+      "notes": "IPython kernel hooks + FastAPI backend + teacher dashboard. Must be operational before pilot data collection."
+    },
+    {
+      "id": "D2",
+      "title": "Composable Courseware Modules (Algebra + Statistics)",
+      "due": "2027-07-01",
+      "owner": "Reinhart + Napolitano",
+      "type": "software + curriculum",
+      "status": "pending",
+      "notes": "≥2 modules ready for Year 1 summer institute (4 teachers). L01-02 from IIS-2123343 can be adapted."
+    },
+    {
+      "id": "D3",
+      "title": "Teacher Professional Development Program",
+      "due": "2027-08-31",
+      "owner": "Hill + Mayne + Cesare",
+      "type": "educational program",
+      "status": "pending",
+      "notes": "Year 1: 4 teachers (budget); Year 2: 12 teachers; Year 3: 12 teachers in AY. NEIC runs monthly academic year."
+    },
+    {
+      "id": "D4",
+      "title": "Pilot Dataset (~100 students, 2 sites)",
+      "due": "2027-12-31",
+      "owner": "Napolitano + Yao",
+      "type": "dataset",
+      "status": "pending",
+      "notes": "1 Title I + 1 rural school. Establish κ ≥ 0.70 inter-rater reliability. BLOCKED until IRB approved."
+    },
+    {
+      "id": "D5",
+      "title": "Full Student Math Modeling Learning Dataset (~4500 students)",
+      "due": "2029-12-31",
+      "owner": "Napolitano + Yao",
+      "type": "dataset",
+      "status": "pending",
+      "notes": "5 layers; tens of millions events; FAIR, ICPSR + OSF, CC-BY."
+    },
+    {
+      "id": "D6",
+      "title": "Annotation Protocols + Codebook",
+      "due": "2029-10-31",
+      "owner": "Yao + Napolitano",
+      "type": "methodology document",
+      "status": "pending",
+      "notes": "xAPI/Caliper aligned; Reasoning Pattern Codes + Error Taxonomy + Productive Struggle Indicators."
+    },
+    {
+      "id": "D7",
+      "title": "Data Translation Framework",
+      "due": "2029-10-31",
+      "owner": "Napolitano",
+      "type": "methodology document",
+      "status": "pending",
+      "notes": "Documented protocol (not software); complexity dials; published OSF + journal submission."
+    },
+    {
+      "id": "D8",
+      "title": "Proof-of-Concept Classifier (productive vs. unproductive struggle)",
+      "due": "2029-10-31",
+      "owner": "Yao + Napolitano",
+      "type": "software + research output",
+      "status": "pending",
+      "notes": "Random forest or logistic regression; training pipeline on GitHub."
+    },
+    {
+      "id": "D9",
+      "title": "Publications (empirical + methods)",
+      "due": "2028-12-31",
+      "owner": "Napolitano + Yao",
+      "type": "publication",
+      "status": "pending",
+      "notes": "Target: JLS, CI (RQ1); JRME, ER (RQ2); dataset descriptor to JEDM/NeurIPS."
+    },
+    {
+      "id": "D10",
+      "title": "Project Website",
+      "due": "2027-05-31",
+      "owner": "Napolitano + Remington",
+      "type": "website",
+      "status": "pending",
+      "notes": "Budget: $10K over 3 years ($5K Y1, $3K Y2, $2K Y3). Must launch before pilot data collection."
+    },
+    {
+      "id": "D11",
+      "title": "Phase II Proposal",
+      "due": "2029-12-31",
+      "owner": "Napolitano",
+      "type": "grant proposal",
+      "status": "pending",
+      "notes": "Budget includes $5,408 Phase II travel in Year 1 for CAMEL cross-network meetings."
+    }
+  ],
+  "milestones": [
+    {"id": "M0a", "title": "Submit IRB application", "due": "2026-07-31", "status": "pending", "priority": "CRITICAL"},
+    {"id": "M0b", "title": "Begin hiring grad students (2)", "due": "2026-08-31", "status": "pending"},
+    {"id": "M0c", "title": "Begin hiring CSATS Computational Education Specialist", "due": "2026-08-31", "status": "pending"},
+    {"id": "M0d", "title": "Kathy initiates school partnership outreach", "due": "2026-07-31", "status": "pending"},
+    {"id": "M0e", "title": "Reinhart and Zuo begin dataset preparation", "due": "2026-12-31", "status": "pending"},
+    {"id": "M0f", "title": "3 IOs created by grants office (PSC, AE, Education)", "due": "2026-07-31", "status": "pending"},
+    {"id": "M1", "title": "IRB approval obtained — required before any pilot", "due": "2027-01-31", "status": "pending", "priority": "CRITICAL"},
+    {"id": "M2", "title": "Grad students (2) hired and onboarded", "due": "2027-01-01", "status": "pending"},
+    {"id": "M3", "title": "CSATS AI CS Ed Specialist hired", "due": "2027-01-01", "status": "pending"},
+    {"id": "M4", "title": "School partnership agreements signed (7 districts)", "due": "2027-04-30", "status": "pending"},
+    {"id": "M5", "title": "Industrial datasets prepared (Reinhart AFM + Zuo cooling)", "due": "2027-05-31", "status": "pending"},
+    {"id": "M6", "title": "Telemetry framework operational — proof of concept", "due": "2027-07-31", "status": "pending"},
+    {"id": "M7", "title": "≥2 Composable Courseware modules ready for teacher PD", "due": "2027-07-01", "status": "pending"},
+    {"id": "M8", "title": "Year 1 Summer Institute — 4 teachers trained", "due": "2027-08-31", "status": "pending"},
+    {"id": "M9", "title": "NEIC established and running monthly", "due": "2027-09-30", "status": "pending"},
+    {"id": "M10", "title": "Pilot data collection complete (~100 students, 2 sites)", "due": "2027-12-31", "status": "pending"},
+    {"id": "M11", "title": "Inter-rater reliability established (κ ≥ 0.70)", "due": "2027-12-31", "status": "pending"},
+    {"id": "M12", "title": "Project website launched", "due": "2027-05-31", "status": "pending"},
+    {"id": "M13", "title": "CAMEL cross-network engagement begun", "due": "2027-10-31", "status": "pending"},
+    {"id": "M14", "title": "Year 2 Summer Institute — 12 additional teachers (total 16)", "due": "2028-08-31", "status": "pending"},
+    {"id": "M15", "title": "Advisory board established (4 members)", "due": "2028-04-30", "status": "pending"},
+    {"id": "M16", "title": "Full data collection underway at all partner schools", "due": "2028-10-31", "status": "pending"},
+    {"id": "M17", "title": "Cross-site annotation reliability confirmed", "due": "2028-12-31", "status": "pending"},
+    {"id": "M18", "title": "Codebook v1 complete (Reasoning Pattern Codes + Error Taxonomy)", "due": "2028-12-31", "status": "pending"},
+    {"id": "M19", "title": "Data Translation Framework draft to Practitioner Review Board", "due": "2028-12-31", "status": "pending"},
+    {"id": "M20", "title": "≥1 empirical paper submitted (RQ1)", "due": "2028-12-31", "status": "pending"},
+    {"id": "M21", "title": "≥1 methods paper submitted (RQ2)", "due": "2028-12-31", "status": "pending"},
+    {"id": "M22", "title": "Conference presentations (ICLS, NARST, or PME)", "due": "2028-12-31", "status": "pending"},
+    {"id": "M25", "title": "Final data collection complete (~4500 students)", "due": "2029-06-30", "status": "pending"},
+    {"id": "M26", "title": "Dataset curation complete — 5 layers; bias audit done", "due": "2029-09-30", "status": "pending"},
+    {"id": "M27", "title": "Proof-of-concept classifier trained and evaluated (D8)", "due": "2029-10-31", "status": "pending"},
+    {"id": "M28", "title": "Annotation protocols finalized + published on OSF (D6)", "due": "2029-10-31", "status": "pending"},
+    {"id": "M29", "title": "Data Translation Framework published on OSF (D7)", "due": "2029-10-31", "status": "pending"},
+    {"id": "M30", "title": "Full dataset published on ICPSR + OSF with DOI (D5)", "due": "2029-12-31", "status": "pending"},
+    {"id": "M31", "title": "Phase II proposal submitted (D11)", "due": "2029-12-31", "status": "pending"},
+    {"id": "M32", "title": "NSF Award Period Ends", "due": "2029-06-30", "status": "pending"},
+    {"id": "M33", "title": "Final Project Report due", "due": "2029-09-28", "status": "pending"}
+  ],
+  "personnel": [
+    {"name": "Rebecca Napolitano", "role": "PI", "email": "nap@psu.edu", "institution": "Penn State AE", "effort": "33.33%, 1 summer mo./yr", "io": "Engineering", "status": "active"},
+    {"name": "Xiangquan (James) Yao", "role": "Co-PI — Science of Learning Lead", "email": "xzy73@psu.edu", "institution": "Penn State", "effort": "5% AY + 18.3% SU (1 mo. total/yr)", "io": "Education", "status": "active"},
+    {"name": "Wesley F. Reinhart", "role": "Co-PI — Materials Data Originator", "email": "reinhart@psu.edu", "institution": "Penn State MSE", "effort": "16.67%, 0.5 summer mo./yr", "io": "Engineering", "status": "active"},
+    {"name": "Wangda Zuo", "role": "Co-PI — Energy Systems Data Originator", "email": "wangda.zuo@psu.edu", "institution": "Penn State AE", "effort": "8.33%, 0.25 summer mo./yr", "io": "Engineering", "status": "active"},
+    {"name": "Kathleen Hill", "role": "Co-PI — Practitioner Implementation Lead", "email": "kathyhill@psu.edu", "institution": "Penn State CSATS", "effort": "15%, 1.35 AY + 0.45 SU mo.", "io": "Education", "status": "active"},
+    {"name": "Amber Cesare", "role": "Curriculum Integration Specialist", "institution": "CSATS", "effort": "25% Yr1; 30% Yr2 & Yr3", "io": "Education", "status": "active"},
+    {"name": "Jeff Remington", "role": "Outreach Liaison", "institution": "CSATS", "effort": "5%, 0.60 mo.", "io": "Education", "status": "active"},
+    {"name": "TBH — AI CS Ed Specialist", "role": "CSATS Computational Education Specialist", "institution": "CSATS", "effort": "25%, 3 mo.", "io": "Education", "status": "to-be-hired"},
+    {"name": "TBH — Grad Student 1", "role": "PhD student — Engineering IO (Wes/Becca lab)", "institution": "Penn State", "effort": "Grade 12; half-time AY; full tuition Y1&Y2; post-comp Y3", "io": "Engineering", "status": "to-be-hired"},
+    {"name": "TBH — Grad Student 2", "role": "PhD student — Education IO (Xiangquan lab)", "institution": "Penn State", "effort": "Grade 12; half-time AY; full tuition Y1&Y2; post-comp Y3", "io": "Education", "status": "to-be-hired"},
+    {"name": "TBH — Grad Student Summer", "role": "Graduate Assistant — summer", "institution": "Penn State", "effort": "Grade 12; half-time summer; no tuition", "io": "Engineering", "status": "to-be-hired"},
+    {"name": "TBH — Undergraduate RA", "role": "Undergraduate Research Assistant", "institution": "Penn State", "effort": "$6,000/yr", "io": "Engineering", "status": "to-be-hired"}
+  ],
+  "reports": {
+    "annual_report_year1": {
+      "due": "2027-04-01",
+      "note": "~90 days before 06/30/2027 — confirm exact date on research.gov",
+      "submitted": false,
+      "submitted_date": ""
+    },
+    "annual_report_year2": {
+      "due": "2028-04-01",
+      "note": "~90 days before 06/30/2028 — confirm exact date on research.gov",
+      "submitted": false,
+      "submitted_date": ""
+    },
+    "final_report": {
+      "due": "2029-09-28",
+      "note": "90 days after 06/30/2029",
+      "submitted": false,
+      "submitted_date": ""
+    }
+  },
+  "last_updated": "2026-06-24",
+  "status_values": "pending | on-track | at-risk | done | late"
+}
