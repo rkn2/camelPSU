@@ -194,7 +194,6 @@ txbox(s, "Data & Infrastructure Partners", 8.0, 1.45, 4.8, 0.4,
 partners = [
     ("2DCC-MIP (Penn State)", "Materials science AFM datasets — source for Composable Courseware industrial context"),
     ("Penn State ICDS", "Compute + storage infrastructure for telemetry backend and dataset archiving"),
-    ("E.B. Howard Consultants\n(Christine Howard)", "Independent external evaluation throughout the grant period"),
 ]
 py = 1.95
 for name, desc in partners:

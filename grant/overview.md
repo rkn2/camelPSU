@@ -36,7 +36,6 @@
 | Grad Student 2 | TBH | — | Penn State | Engineering IO — annotations + ML (Grade 12, half-time) |
 | Grad Student (summer) | TBH | — | Penn State | Half-time summer appointment |
 | Undergraduate RA | TBH | — | Penn State | Research assistance |
-| External Evaluator | Christine E.B. Howard | — | E.B. Howard Consultants | Independent evaluation |
 
 ## NSF Contacts
 

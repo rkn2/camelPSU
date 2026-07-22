@@ -36,7 +36,6 @@ Napolitano · Yao · Reinhart · Zuo · Hill
 **Data & Infrastructure Partners:**
 - 2DCC-MIP (Penn State) — materials science AFM datasets
 - Penn State ICDS — compute and storage infrastructure
-- E.B. Howard Consultants (Christine Howard) — independent external evaluation
 
 ---
 
